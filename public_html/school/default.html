@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -102,17 +101,19 @@
 				else if(lat<38&&lat>28&&lon>-95&&lon<-85)auburn();//gulf coast -US
 				else if(typeof(lat)=="number"&&typeof(lon)=="number")gatech();//any other real coordinates
 				else getLocation();//undefined(no location)
-			}(function getLocation(){
+			}
+			(function getLocation(){
 				if(!!navigator.geolocation)navigator.geolocation.getCurrentPosition(pickcollege);
 				else alert("ERROR:\n Geolocation is not supported by this browser");
 			})();
-			function showhidehow(){
+			
+			(function showhidehow(){
 				if(open){document.getElementById('how').style.display="block";
 					document.getElementById('showhide_txt').innerHTML="[hide]";redrawmap();
 				}else{document.getElementById('how').style.display="none";
 					document.getElementById('showhide_txt').innerHTML="[show]";
 				}open=!open;
-			}showhidehow();//-->
+			})();//-->
 		</script>
 	</body>
 </html>
