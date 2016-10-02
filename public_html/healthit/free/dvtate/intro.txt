@@ -1,0 +1,1 @@
+Welcome to my profile page, I'm not a doctor, and don't have plans to become one, but I wanted my profile up to make sure my site was working. My personal website is <a href="http://dvtate.com/" target="_blank">dvtate.com</a>.

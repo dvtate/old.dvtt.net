@@ -1,0 +1,37 @@
+/* this style consists of all previously created style-sheets */
+/*main style*/
+body {background-color: grey;margin-left: 5%;margin-right: 5%;
+	color: black;font-family: charcoal,  verdana, sans-serif;
+} .oln {text-decoration: overline;
+} .udln {text-decoration: underline;
+} .title {background-color: red;
+} .ind, p {text-indent: 50px;
+} .main {background-color: white;
+} .main2 {background-color: white;margin-left: 2%;margin-right: 2%;
+} .pagenavn {text-align: center;text-decoration: underline;
+	background: blue;color: white;
+} .bad {background-color: red;
+} .scr {color: white;
+} a.hostbtn {/*ads*/text-align: center;
+} .white { background-color: white; }
+/*quicklink tabs*/
+ ul.pages {list-style-type: none;margin: 0;padding: 0;overflow: hidden;
+} li.page {float: right;list-style-type: none;
+} a.page:link, a.page:visited {display: block;width: 200px;
+	font-weight: bold;color: #FFFFFF;background-color: #98bf21;
+	text-align: center;padding: 4px;
+	text-decoration: none;text-transform: uppercase;
+} a.page:hover, a.page:active {background-color: #7A991A;
+} a.quicklink:link, a.quicklink:visited {display: block;
+	width: 200px;font-weight: bold;color: #FFFFFF;
+	background-color: #98bf21;text-align: center;
+	padding: 4px;text-decoration: none;
+	text-transform: uppercase;
+} a.quicklink:hover, a.quicklink:active {background-color: #7A991A;
+} ul.quicklink {list-style-type: none;margin: 0;padding: 0;
+} li.quicklink {float: left;list-style-type: none;
+} #color4link {background-color: #98bf21;}
+/* website link  navn*/
+a.home-link:link, a.home-link:visited, a.quicklink:hover {color: #FFFFFF;}
+/*structured_tables*/
+table.str, tr.str, th.str, td.str {vertical-align: top;}	

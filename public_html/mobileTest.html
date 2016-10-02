@@ -1,0 +1,20 @@
+<script>
+// Apple detection object
+var Apple = {};
+Apple.UA = navigator.userAgent;
+Apple.Device = false;
+Apple.Types = ["iPhone", "iPod", "iPad"];
+for (var d = 0; d < Apple.Types.length; d++) {
+	var t = Apple.Types[d];
+	Apple[t] = !!Apple.UA.match(new RegExp(t, "i"));
+	Apple.Device = Apple.Device || Apple[t];
+}
+
+// is this an Apple device?
+alert(
+	"Apple device? " + Apple.Device +
+	"\niPhone? " + Apple.iPhone +
+	"\niPod? " + Apple.iPod +
+	"\niPad? " + Apple.iPad
+);
+</script>

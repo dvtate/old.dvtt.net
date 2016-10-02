@@ -1,0 +1,1 @@
+<ul><li><b><u>phone</u>:</b> +15555555555</li><li><b><u>email</u>:</b> <a href="mailto:jsmith@example.com" target="_top">jsmith@example.com</a></li></ul>

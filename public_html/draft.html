@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="DV Tate's personal Website homepage" />
+		<meta name="author" content="Dustin Van Tate Testa" />
+		<meta name="keywords" content="tate testa dustin van freshman blacksmith fish forge programming Dustin Van Tate Testa" />
+		<meta name="start-date" content="2-2-2015"/>
+		<meta name="edit-date" content="2-5-2015"/>
+		<title>Home - Tate's Website</title>
+		<style type="text/css">
+			/*page structure*/
+			body{background-color: grey;
+				background-image: url(//dvtate.com/styles/baggrund.png);
+				font-family: charcoal, sans-serif;
+			}div.main{color: black;background-color: white;padding-top: 2px;
+				padding-bottom: 5px;padding-left: 10px;padding-right: 20px;
+			}
+			/*page-link menu*/
+			li.page {display: inline-block;float: center;list-style-type: none;}
+			a.page:link, a.page:visited {margin-left:5px; margin-right:5px;
+				display: block;font-weight: bold;color: #FFFFFF;background-color: black;
+				text-align: center;padding: 4px;text-decoration: none;text-transform: uppercase;
+				border: 2px solid white;
+			}a.page:hover {background-color: white;color: black;border: 2px solid black;
+			}a.page:active{background-color: white;color: red;border: 2px solid black;}
+			a.here:link, a.here:visited {margin-left:5px; margin-right:5px;
+				display: block;font-weight: bold;color: red;background-color: white;
+				text-align: center;padding: 4px;
+				text-decoration: none;text-transform: uppercase;
+				border: 2px solid black;border-radius: 5px;
+			}a.here:active {background-color: white;color: black;border: 2px solid black;}
+			/*content*/
+			p.ind {text-indent: 50px;}
+			img.bdr {border: 1px solid black;}
+			.extends {white-space: nowrap;}
+			#hostbtn {text-align: center;}
+		</style>
+		<ul id="pages"><!--page menu-->
+			<li class="page"><a class="here" href="//dvtate.com/" >Home</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/me/">Me</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/prog/" >Programming</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/forge/" >Blacksmithing</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/lab/" >The Lab</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/tanks/" >My Aquariums</a></li>
+			<li class="page"><a class="page" href="//dvtate.com/calc/" >Calculators</a></li>
+		</ul><hr/>
+		<!--rebuild script that automatically checks to see where you are & sets links to style-->
+	</head>
+	<body>
+		<div class="main">
+			<h1><u>Current Favorite Language</u>:</h1>
+			<ul>
+				<table class="str">
+					<tr class="str">
+						<td class="str"><a href="http://www.erlang.org/"><img src="http://www.erlang.org/images/erlang.png"/></a></td>
+						<td class="str" id="lang-description">
+							<p class="ind">Erlang is a functional programming language, it has 'variables', but you can't change their value. Erlang is popular because it is a concurrent language so, it supports multi-threading and can use more than one core/processor, which means it can do more than one thing at a time, making it very fast.</p>
+						</td>
+					</tr>
+				</table>
+			</ul>
+			<h1><u>Updates</u>:</h1>
+			<ul id="update-timeline">
+				<li><u>2-2-2015</u>: Rebuilt website homepage from scratch <a href="//dvtate.com/olddefault.php" target="_blank">(view old)</a>.</li>
+				<li><u>1-20-2015</u>: Made a summations calculator using AJAX.</li>
+				<li><u>1-15-2015</u>: Started playing with <a href="http://www.erlang.org/" target="_blank">Erlang</a>.</li>
+				<li><u>11-20-2014</u>: My 15<sup><u>th</u></sup> birthday.</li>
+				<li><u>9-19-2014</u>: Built original programming page</li>
+				<li><u>9-5-2014</u>: Rebuilt <a  href="//dvtate.com/prog/php/tri.php" >tri.php</a> to fit homepage style</li>
+				<li><u>8-27-2014</u>: Built original homepage.</li>
+				<li><u>6-30-2014</u>: converted tri.asp to <a id="oldtricalc" href="//dvtate.com/prog/php/oldtri.php">oldtri.php</a></li>
+			</ul>
+			<h1 class="extends"><u>About this Website</u>:</h1>
+			<ul>
+				<p class="ind">In the spring of 2014, I created a program in VBScript which finds the area between any 3 coordinates. Most of the kids in my math class wanted a copy of it. I attempted to send it via email, but Gmail wouldn't let me send it. So I converted it to HTA, ASP, and finally PHP (I had never heard of JavaScript). This was my first addition to this website. You can still visit it	<a  href="//dvtate.com/prog/php/tri.php" > here </a> (or<a id="oldtricalc" href="//dvtate.com/prog/php/oldtri.php"> here</a> for the original prototype). I continued to add more pages for all of my hobbies.</p>
+			</ul>
+		</div>
+	</body>
+</html>

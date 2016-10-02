@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="description" content="DV Tate's personal Website homepage. This website is for all of my hobbies and can be used as a reference tool. I have pages for programming,  3D modeling, blacksmithing, calculators, college, and a chatroom."/>
+		<meta name="author" content="Dustin Van Tate Testa"/><title>Home - Tate's Website</title>
+		<meta name="keywords" content="tate testa dustin van freshman blacksmith fish forge programming Dustin Van Tate Testa math calculators"/>
+		<meta name="start-date" id="new-style" content="2-2-2015"/><meta name="edit-date" content="5-13-2015"/>
+		<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			/*including the main(nyental.css) stylesheet from when this was the default homepage to prevent corruption of contents*/
+			table#sprog{max-width: 100%;}
+			/*structure*/
+			html{font-size:112.5%;}body{min-width:450px;font-family:sans-serif;
+				color:#000;margin-left:0px;margin-right:0px;
+				background-color:#000;background-attachment:fixed;
+				background-image:url(http://www.dvtate.com/styles/baggrund.png);
+			}div.main{background-color:#FFF;padding:2px 20px 5px 10px;margin:0% 5%;}
+			/*nav-bar*/
+			a.page:link, a.page:visited{padding:4px;display:block;
+				text-align:center;color:#FFF;text-decoration:none;
+			}a.here{text-align:center;background-color:#FFF;letter-spacing:-1px;
+				text-decoration:none;display:block;padding:4px;color:red;
+			}ul.pages{background-color:grey;margin:0 auto;font-size:20px;
+				padding-top:0px;padding-right:0px;padding-bottom:0px;
+				font-family:'Ubuntu', 'Lucida Grande', Helvetica, sans-serif;
+			}li.page{display:inline-block;list-style:none;}li#category, li#icategory{margin-bottom:2px;}
+			ul.pages li.page ul li.dpage a{margin-left:5px;border-left:2px solid grey;text-decoration:none;}
+			ul.pages li.page ul li.dpage:hover a{margin-left:5px;border-left:2px solid #FFF;text-decoration:none;}
+			ul.pages li.dpage{display:block;float:left;list-style-type:none;}
+			ul.pages li a.page{display:block;padding:4px;text-decoration:none;
+				color:#FFF;background-color:grey;
+			}li.page ul{display:none;}li.page, li.dpage{cursor:pointer;}
+			li.page:hover ul{display:block;position:absolute;}
+			ul.pages li.page{display:inline-block;float:center;list-style-type:none;}
+			li.page:hover li{float:none;font-size:14px;}
+			li.page:hover a.page{background-color:#3B3B3B;text-decoration:none;}
+			ul.pages li a.page:hover{background-color:#1C1C1C;text-decoration:none;}
+			ul.dpages{list-style-type:none;opacity:0.92;padding:0;}
+			/*new homepage modern ui*/
+			td.nybox span.lgfull{display:none;font-size:75%;}
+			td.nybox{background-color:#efefef;display:inline-block;
+				width:30%;height:250px;margin:4px;margin-bottom:0;
+				padding-left:4px;overflow:auto;transition:width 1s;
+				-webkit-transition:width 1s;/*safari*/
+			}table.row{width:99%;margin:0;padding:0;overflow-x:hide;}
+			/*prog compatibility (page menu)*/
+			ul.opages{list-style-type:none;margin:0;padding:0;overflow:hidden;position:absolute;}
+			li.opage{float:right;list-style-type:none;}
+			a.opage{-webkit-transition:text-shadow 2s;/* For Safari 3.1 to 6.0 */ transition: text-shadow 0.5s;}
+			a.opage:link,a.opage:visited{display:block;width:200px;font-weight:bold;
+				color:#FFF;background-color:#3399FF;text-align:center;
+				padding:4px;text-decoration:none;text-transform:uppercase;
+			}a.opage:hover,a.opage:active{background-color:#333399;box-shadow:0px 0px 0.25em #333399;text-shadow:0px 0px 18px #fff;}
+			/*message box*/
+			div.lefttoppopup{background-color:#FFF;border:1px solid #000;opacity:1;
+				position:absolute;top:2%;margin-right:auto;margin-left:0px;width:70%;color:#000;
+				box-shadow:0 0 0.25em #000;border-radius:0px 4px 4px 0px;z-index:1002;
+			}div.dimbag{position:fixed;/*var:absolute*/top:0;bottom:0;left:0;right:0;
+				background-color:#FFF;opacity:0.8;z-index:1001;
+			}h1#poptitle{margin-left:2%;}
+			/*chat room::posts*/
+			div#post{border:3px solid #647083;border-radius:3px;
+				text-rendering:optimizeSpeed;margin:0% 6%;
+				background-color:#FFF;box-shadow:10px 10px #000;
+				padding-bottom:5px;padding-right:5px;				
+			}div.msg{border:1px solid #718DBC;border-radius:4px;
+				box-shadow:0 0 0.25em rgb(5,9,2);padding:5px;margin-left:2%;
+			}table#iconname{max-width:80%;}
+			/*code blocks & containers*/
+			pre#code{overflow-x:scroll;border:1px solid #000;text-align:left;
+				word-spacing:-1px;line-height:1.5;padding:5px;
+			}pre.syntax{border:1px solid #000;white-space:pre-wrap;/* CSS 3 */
+				white-space:-moz-pre-wrap;/* Mozilla, since 1999 */
+				white-space:-pre-wrap;/* Opera 4-6 */white-space:-o-pre-wrap;/* Opera 7 */
+				word-wrap:break-word;text-align:left;
+			}pre.code{overflow-x:scroll;border:1px solid #000;text-align:left;
+				word-spacing:-1px;line-height:1.5;padding:5px;
+			}span#code_samp{background-color:#EEE;font-family:Courier,courier;}
+			/*chat room::post form*/
+			textarea#msgin{resize:none;height:99.2%;width:98%;}
+			div#newpost{border-left:20px solid green;}
+			/*content*/
+			a{text-decoration:none;}a:hover{text-decoration:underline;}a:active{color:red;}a.broken-link{color:red;}a.broken-link:active{text-shadow:0px 0px 18px #f00;}
+			.pagenavn{margin-left:5%;margin-right:5%;margin-bottom:0px;padding-left:10px;background-color:blue;color:#fff;}
+			ul{list-style-type:square;}.alert{margin-left:5%;margin-right:5%;padding:5px;border-radius:10px;}
+			input#good{border:1px solid green;box-shadow:0px 0px 0.25em green;background-color:#eaeaea;}/*green shadow*/
+			input#bad{border:1px solid red;box-shadow:0px 0px 0.25em red;background-color:#eaeaea;}/*red shadow*/
+			input#block{display:block;border:1px solid #000;background-color:#eaeaea;}span#badinp{color:red;}
+			img#ico{border:1px solid grey;border-radius:5px;background-color:#fff;}
+			table.str, tr.str, th.str, td.str{vertical-align:top;}.title{text-align:center;}p.ind{text-indent:50px;}
+			h2,h3,h1,h4,h6{font-family:'Ubuntu', 'Lucida Sans Unicode', 'Lucida Grande', Helvetica, sans-serif;}
+		</style>
+		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
+		<script type="text/javascript"><!--//Google Analytics
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-59746939-2', 'auto');ga('send', 'pageview');//-->
+		</script>
+	</head><body>
+		<ul class="pages"><!--page-link menu-->
+			<li class="page" id="home"><a class="here" href="http://dvtate.com/">Home</a></li>
+			<li class="page" id="icategory" onclick=""><a class="page">Hobbies</a>
+				<ul class="dpages" id="hob">
+					<li class="dpage"><a class="page" href="http://dvtate.com/prog/">Programming</a></li>
+					<li class="dpage"><a class="page" href="http://dvtate.com/3d/">3d modelling</a></li>
+					<li class="dpage"><a class="page" href="http://dvtate.com/forge/">Blacksmithing</a></li>
+					<li class="dpage"><a class="page" href="http://dvtate.com/lab/">The Lab</a></li>
+					<li class="dpage"><a class="page" href="http://dvtate.com/tanks/">My Aquariums</a></li>
+					<li class="dpage"><a class="page" href="http://dvtate.com/os/">Operating Systems</a></li>
+				</ul>
+			</li>&nbsp;<li class="page" id="category"><a class="page" href="http://dvtate.com/chat/">Chat</a></li>
+			<li class="page" id="category"><a class="page" href="http://dvtate.com/calc/">Calculators</a></li>
+			<li class="page" id="category"><a class="page" href="http://dvtate.com/school/">College</a></li>
+		</ul><div class="main">
+			<h2><b>Current Favorite Language</b></h2><!--4/6-->
+			<ul><table id="sprog"><tr>
+						<td><a href="http://www.php.net/"><img src="http://php.net/images/logo.php"/><br/><img src="http://php.net//images/logos/php5-power-micro.png"/></a></td>
+						<td id="lang-om">
+							<p class="ind"><a href="http://dvtate.com/prog/php/">PHP</a> is a server-side scripting language. It is commonly mixed with HTML in many web pages which process information, (ie- login, shopping, blogs, etc.). My interest in PHP was re-sparked on my most recent project, my <a href="http://dvtate.com/chat/">chatroom</a>. Where I got back into PHP.</p>
+			</td></tr></table></ul>
+			<h2><b>Updates</b></h2>
+			<ul id="update-timeline">
+				<li><b><u>7-27-2015</u></b>: Built the <a href="http://dvtate.com/os/">operating systems</a> page.</li>
+				<li><b><u>6-11-2015</u></b>: Built <a href="http://dvtate.com/3d/">3D modeling</a> page.</li>
+				<li><b><u>6-5-2015</u></b>: Added a <a href="http://dvtate.com/school/">college</a> page. But there's a trick :)</li>
+				<li><b><u>5-21-2015</u></b>: converted all <a href="http://dvtate.com/calc/">calculators</a> to JavaScript.</li>
+				<li><b><u>5-12-2015</u></b>: Added mobile support for iOS.</li>
+				<li><b><u>5-9-2015</u></b>: Built <a href="http://dvtate.com/forge/">forge</a> page. Adjustments to <a href="http://dvtate.com/chat/">chatroom</a></li>
+				<li><b><u>5-5-2015</u></b>: rebuilt <a href="http://dvtate.com/prog/">programming</a> page to fit new style</li>
+				<li><b><u>4-20-2015</u></b>: registered new domain (<a href="http://dvtate.com/">dvtate.com</a>) to replace <a href="http://dvtate.hostoi.com/">dvtate.hostoi.com</a></li>
+				<li><b><u>4-12-2015</u></b>: Finished <a href="http://www.dvtate.com/chat/">chatroom</a>.</li>
+				<li><b><u>4-6-2015</u></b>: Began Work on <a href="http://dvtate.com/chat/">chatroom</a>, Favorite language changed to <a href="http://www.dvtate.com/prog/php.php/">PHP</a></li>
+				<li><b><u>2-13-2015</u></b>: Adjustments to page menu, fonts, style, drop-down menus, etc.(<a href="http://www.dvtate.com/draft.html/">view old</a>)</li> 
+				<li><b><u>2-2-2015</u></b>: Rebuilt website homepage from scratch (<a href="http://dvtate.com/olddefault.php">view old</a>).</li>
+				<li><b><u>1-20-2015</u></b>: Made a summations calculator using JavaScript. Plan to replace all calculators with JavaScript</li>
+				<li><b><u>1-15-2015</u></b>: Started playing with <a href="http://www.erlang.org/" target="_blank">Erlang</a>.</li>
+				<li><b><u>11-20-2014</u></b>: My 15<sup>th</sup> birthday.</li>
+				<li><b><u>9-19-2014</u></b>: Built original programming page</li>
+				<li><b><u>9-5-2014</u></b>: Rebuilt <a  href="http://dvtate.com/prog/php/tri.php" >tri.php</a> to fit homepage style</li>
+				<li><b><u>8-27-2014</u></b>: Built original homepage.</li>
+				<li><b><u>7-1-2014</u></b>: Started playing with C# (within <a href="http://www.unity3d.com/" target="_blank">Unity</a>)</li>
+				<li><b><u>6-30-2014</u></b>: converted tri.asp to <a href="http://dvtate.com/prog/php/oldtri.php">oldtri.php</a></li>
+			</ul>
+			<h2><b>About this Website</b></h2>
+			<ul><p class="ind">In the spring of 2014, I created a program in VBScript which finds the area between any 3 coordinates. Most of the kids in my math class wanted a copy of it. I attempted to send it via email, but Gmail wouldn't let me send it. So I converted it to HTA, ASP, and finally PHP (I had never heard of JavaScript). This was my first addition to this website. You can still visit it <a  href="http://www.dvtate.com/prog/php/tri.php" >here</a> (or <a href="http://www.dvtate.com/prog/php/oldtri.php">here</a> for the original prototype). I continued to add more pages for all of my hobbies.</p></ul>
+		</div>
+		<center>
+			<a id="hostbtn" class="ad" href="http://www.000webhost.com/" target="_blank" align="center">
+				<img src="http://www.000webhost.com/images/80x15_powered.gif" alt="Web Hosting" width="80" height="15" border="0" /><!--host ad-->
+			</a><div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height='15' data-rel="{relationshipType}"></div><!--g+ follow-->
+			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300" data-href="http://www.dvtate.com"></div><!--google+1-->
+		</center>
+	</body>
+</html>

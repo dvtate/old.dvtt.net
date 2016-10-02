@@ -1,0 +1,11 @@
+body {color: black;background-color: grey;
+	margin-left: 5%;margin-right: 5%;
+}h1 {background: blue;color: white;}
+h3 {font-style: bold;display: block;
+	color: #FFFFFF;background-color: #98bf21;
+	text-align: center;padding: 4px;
+}h5 {text-decoration: underline;}
+h6.scr {text-decoration: through-line;color: white;
+}span {text-decoration: underline;
+}div.main {background: white;
+}table, th, td{	border: 1px solid black;}
