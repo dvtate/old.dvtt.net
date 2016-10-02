@@ -64,7 +64,8 @@
 				//in future checks account/login data
 				$name=$_POST['navn'];$msg=$_POST['msg'];#get data fra form
 				$name=trim($name);$err = false;
-				if($name===""|| $name==="tate"||$name==="Tate"||$name==="Admin"||$name==="Mod"){$err = true;$GLOBALS['nameErr']="<span id=\"badinp\">*Chose another name</span>";}
+				if($name===""|| $name==="tate"||$name==="Tate"||$name==="Admin"||$name==="Mod")
+					{$err = true;$GLOBALS['nameErr']="<span id=\"badinp\">*Chose another name</span>";}
 				if($name===""){$err = true;$GLOBALS['nameErr']="<span id=\"badinp\">*Name Required</span>";}
 				if($msg===""){$GLOBALS['msgErr']="<span id=\"badinp\">*Content Required</span>";}
 				if($err){return;}//prevent post on error
@@ -139,7 +140,7 @@
 			}function makepost($name, $msg){//creates the html for the post from the information given
 				$mydate=getdate(date("U"));//check date
 				$date="$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";//convert date into a string
-				if($name==="æøådansk99"){//password as name means admin post
+				if($name==="Like I\'d actually give you the admin password XDD"){//password as name means admin post
 					$post="\n<div id=\"post\"><table id=\"iconname\"><tr><td><img id=\"ico\" src=\"//dvtate.com/chat/guest.png\" height=\"80px\" alt=\"profile picture\" title=\"Guest\" /></td><td id=\"info\"><b>Name</b>: Tate";
 				}else{
 					$post="\n<div id=\"post\"><table id=\"iconname\"><tr><td><img id=\"ico\" src=\"//dvtate.com/chat/guest.png\" height=\"80px\" alt=\"profile picture\" title=\"Guest\" /></td><td id=\"info\"><b>Name</b>: ";
@@ -190,3 +191,4 @@
 	</body>
 </html>
 
+	
