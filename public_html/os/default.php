@@ -53,7 +53,7 @@
 			}
 			function cdstory(){alert("When taking apart an old computer, I found an unlabled CD in the bay, I put it into my laptop"+
 			"to see what was on it, after a minute or so of going through the files(looked strange), My [lousy] antivirus flared up with "+
-			"two detections, I figured out later that there were some that got through.");}
+			"two detections, I figured out later that there were some that got through.\n*Note: this was before I entered the world of linux :)))");}
 			//-->
 		</script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
@@ -180,7 +180,7 @@
 			}
 		?><div class="main" id="nyos">
 			<h2><strong>Suggest an OS:</strong></h2><ul>
-				<form action="index.php" id="osform" name="postdat" method="post">
+				<form action="default.php" id="osform" name="postdat" method="post">
 					<h4 style="display:inline">Name:</h4> <input type="text" name="navn" id="navn" onkeyup="chkin()" placeholder="ie-Joe" required="true" title="What do you want your name to show up as?"/><?php echo $nameErr; ?><br/>
 					<h4 style="display:inline">Email:</h4> <input type="text" name="email" id="email" onkeyup="chkin()" placeholder="example@gmail.com" required="true" title="Your email is used to prevent spam on my website. As a token of respect, I won't send you spam."/><?php echo $emailErr; ?><br/>
 					<!--<h4 style="display:inline">Website:</h4> http://<input type="text" name="email" id="email" onkeyup="chkin()" placeholder="google.com (blank for none)" required="true" title="If you have a website, your name will become a link to it."/><br/><!--determined to be too much code work and no one will use this-->
