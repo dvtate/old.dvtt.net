@@ -96,6 +96,7 @@
 				</span><span class="lgfull" id="col1row1lg" onclick="resetboxes()">
 					<h2 title="see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
+						<li><b>2016.10.2</b>: made a <a href="https://github.com/dvtate/dvtate.com" target="_blank">GitHub repo for this website</a> so you can see my source.</li>
 						<li><b>2016.8.20</b>: got annoied by my website's obsoleteness. Spiced things up with some Serial Experiments lain themed content and some <span title="from when my parents made me get off my gfs vps">minor fixes</span>.</li>
 						<li><b>2016.8.15</b>: realized that <a href="https://plus.google.com/+Tatetesta/posts/AYFf3A2wsbC" target="_blank">my school district was blocking my website</a>... those bastards.</li>
 						<li><b>2016.8.1</b>: School starts. 5 AP Classes. This is gonna be difficult.</li>
