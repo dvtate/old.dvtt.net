@@ -1,3 +1,157 @@
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: Weijie <br/> <b>Date</b>: Monday, October 17, 2016</td></tr></table><div class="msg"><object>Im triggered</object></div></div><br/>
+
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/admin.jpg"  height="80px" alt="profile picture" title="SysAdmin: Can edit and/or delete your posts."/></td><td id="info"><b>Name</b>: Tate<br/><b>Date</b>: Thursday, October 13, 2016</td></tr></table><div class="msg"><object>@SJW, who u be?</object></div></div><br/>
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/admin.jpg"  height="80px" alt="profile picture" title="SysAdmin: Can edit and/or delete your posts."/></td><td id="info"><b>Name</b>: Tate<br/> <b>Date</b>: Thursday, October 13, 2016</td></tr></table><div class="msg"><object>Rock paper scissors :D
+<pre id='code'>
+import java.util.*;
+
+
+// rock paper scissors
+public class Ch3Proj8 {
+
+&#09;private static int getUserResponse(){
+
+&#09;&#09;int ret = -1;
+&#09;&#09;Scanner stdin = new Scanner(System.in);
+
+&#09;&#09;do {
+&#09;&#09;&#09;System.out.print(&#34;Pick rock, paper or scissors or quit: &#34;);
+
+&#09;&#09;&#09;String userChoice = stdin.next();
+
+&#09;&#09;&#09;if (userChoice.equals(&#34;quit&#34;) || userChoice.equals(&#34;q&#34;))
+&#09;&#09;&#09;&#09;System.exit(0);
+&#09;&#09;&#09;else if (userChoice.equals(&#34;rock&#34;) || userChoice.equals(&#34;r&#34;))
+&#09;&#09;&#09;&#09;return 0;
+&#09;&#09;&#09;else if (userChoice.equals(&#34;paper&#34;) || userChoice.equals(&#34;p&#34;))
+&#09;&#09;&#09;&#09;return 1;
+&#09;&#09;&#09;else if (userChoice.equals(&#34;scissors&#34;) || userChoice.equals(&#34;s&#34;))
+&#09;&#09;&#09;&#09;return 2;
+&#09;&#09;&#09;else {
+&#09;&#09;&#09;&#09;System.out.println(&#34;Invalid choice \&#34;&#34; + userChoice + &#34;.\&#34; , try again.&#34;);
+&#09;&#09;&#09;&#09;ret = -1;
+&#09;&#09;&#09;}
+
+&#09;&#09;} while (ret == -1);
+
+&#09;&#09;return ret; // control will never reach this point
+
+&#09;}
+&#09;
+&#09;public static String itoName(final int num){
+&#09;&#09;switch (num) {
+&#09;&#09;&#09;case 0: return &#34;rock&#34;; 
+&#09;&#09;&#09;case 1: return &#34;paper&#34;;
+&#09;&#09;&#09;case 2: return &#34;scissors&#34;;
+&#09;&#09;}
+&#09;&#09;return &#34;error&#34;; // this should never happen
+&#09;}
+
+&#09;public static void main(String[] args){
+&#09;
+
+&#09;&#09;
+&#09;&#09;Random rand = new Random();
+&#09;&#09;int pcScore = 0, humanScore = 0;
+
+&#09;&#09;for (;;) {
+&#09;&#09;&#09;int input = getUserResponse(),
+&#09;&#09;&#09;&#09;pcChoice = rand.nextInt(3);
+
+&#09;&#09;
+&#09;&#09;&#09;if (input == pcChoice)
+&#09;&#09;&#09;&#09;System.out.println(&#34;The computer also chose &#34; + itoName(input));
+&#09;&#09;&#09;else if (input == 0)
+&#09;&#09;&#09;&#09;if (pcChoice == 1) { // l
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; &lt; &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;pcScore++;
+&#09;&#09;&#09;&#09;} else { // if (pcChoice == 2) // w
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; > &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;humanScore++;
+&#09;&#09;&#09;&#09;}
+&#09;&#09;&#09;else if (input == 1)
+&#09;&#09;&#09;&#09;if (pcChoice == 2) {// l
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; &lt; &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;pcScore++;
+&#09;&#09;&#09;&#09;} else {// if (pcChoice == 0)
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; > &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;humanScore++;
+&#09;&#09;&#09;&#09;}
+&#09;&#09;&#09;else
+&#09;&#09;&#09;&#09;if (pcChoice == 0) {
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; &lt; &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;pcScore++;
+
+&#09;&#09;&#09;&#09;} else { // if (pcChoice == 1)
+&#09;&#09;&#09;&#09;&#09;System.out.println(itoName(input) + &#34; > &#34; + itoName(pcChoice));
+&#09;&#09;&#09;&#09;&#09;humanScore++;
+&#09;&#09;&#09;&#09;}
+
+
+
+&#09;&#09;&#09;System.out.println(&#34;Human: &#34; + humanScore + &#34;&#92;tMachine: &#34; + pcScore);
+&#09;&#09;&#09;System.out.println();
+
+
+&#09;&#09;}
+&#09;&#09;
+&#09;}
+
+};
+
+
+</pre></object></div></div><br/>
+
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: Tanner <br/> <b>Date</b>: Thursday, October 13, 2016</td></tr></table><div class="msg"><object>
+<pre id='code'>
+import java.util.Scanner;
+import java.util.Random;
+public class Ch3Prj8
+{
+  public static void main(String arg[])
+  {
+    int guess, cpu, tie, win, lose;
+    Scanner scan = new Scanner(System.in); 
+    Random generator = new Random(); 
+    boolean play = true;
+    tie = 0;
+    win = 0;
+    lose = 0;
+    while(play)
+    {
+      System.out.println(&#34;Choose 1 for rock, 2 for paper, or 3 for scissors. type 4 to end game&#34;);
+      Random rn = new Random();
+      cpu = rn.nextInt(3)+1;
+      guess = scan.nextInt();
+      if(guess &lt; 1 || guess > 4)
+      {
+      System.out.println(&#34;boi u dum&#34;);
+      }
+      else if( (guess == 1 && cpu == 3) || (guess == 2 && cpu == 1) || (guess == 3 && cpu == 2) )
+      {
+      System.out.println(&#34;u win&#34;);
+        win++;
+      }
+      else if( (guess == 1 && cpu == 2) || (guess == 2 && cpu == 3) || (guess == 3 && cpu == 1) )
+      {
+      System.out.println(&#34;u lose&#34;);
+        lose++;
+      }
+      else if( (guess == 1 && cpu == 1) || (guess == 2 && cpu == 2) || (guess == 3 && cpu == 3) )
+      {
+      System.out.println(&#34;u tie&#34;);
+        tie++;
+      }
+      else
+      {
+        System.out.println(&#34;You won: &#34; + win + &#34; lost: &#34; + lose + &#34; and tied: &#34; + tie + &#34; times.&#34;); 
+      }
+    }
+  }
+}
+</pre></object></div></div><br/>
+
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: SJW <br/> <b>Date</b>: Thursday, October 13, 2016</td></tr></table><div class="msg"><object>The background triggers my ptsd from when someone asked my gender 5 years ago</object></div></div><br/>
 <div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: xX_GabenNewell_Xx <br/> <b>Date</b>: Wednesday, February 10, 2016</td></tr></table><div class="msg"><object>Prepare for the greatest steam summer sale of all time...</object></div></div><br/>
 
 <div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/admin.jpg"  height="80px" alt="profile picture" title="SysAdmin: Can edit and/or delete your posts."/></td><td id="info"><b>Name</b>: Tate<br/><b>Date</b>: Thursday, February 4, 2016</td></tr></table><div class="msg"><object>@Owen True, however, <br/><marquee>marquee is deprecated...</marquee></object></div></div><br/>
