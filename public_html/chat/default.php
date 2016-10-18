@@ -138,15 +138,14 @@
 				fclose($file);
 				return;
 			}function makepost($name, $msg){//creates the html for the post from the information given
-				$mydate=getdate(date("U"));//check date
-				$date="$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";//convert date into a string
-				if($name==="Like I\'d actually give you the admin password XDD"){//password as name means admin post
-					$post="\n<div id=\"post\"><table id=\"iconname\"><tr><td><img id=\"ico\" src=\"//dvtate.com/chat/guest.png\" height=\"80px\" alt=\"profile picture\" title=\"Guest\" /></td><td id=\"info\"><b>Name</b>: Tate";
+				if($name==="PASSWORD_GOES_HERE"){//password as name means admin post (extremely insecure but idc)
+					$post="\n<div id=\"post\"><table id=\"iconname\"><tr><td><img id=\"ico\" src=\"//dvtate.com/chat/admin.jpg\"  height=\"80px\" alt=\"profile picture\" title=\"SysAdmin: Can edit and/or delete your posts.\"/></td><td id=\"info\"><b>Name</b>: Tate";
 				}else{
 					$post="\n<div id=\"post\"><table id=\"iconname\"><tr><td><img id=\"ico\" src=\"//dvtate.com/chat/guest.png\" height=\"80px\" alt=\"profile picture\" title=\"Guest\" /></td><td id=\"info\"><b>Name</b>: ";
 					$post.=$name;
 				}$post.= " <br/> <b>Date</b>: ";
-				$post.=$date;
+				$date=getdate(date("U"));//check date
+				$post.="$date[weekday], $date[month] $date[mday], $date[year]";//convert date into a string
 				$post.="</td></tr></table><div class=\"msg\"><object>";
 				$post.=$msg;
 				$post.="</object></div></div><br/>\n";
@@ -190,5 +189,3 @@
 		</script>
 	</body>
 </html>
-
-	
