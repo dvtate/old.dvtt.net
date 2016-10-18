@@ -11,42 +11,41 @@
 			<p class="ind">I made this without using SQL, mainly because my PHP version is so obsolete, I had no idea if it would work, but also, SQL injection is still can still happen. I added more comments to this code than on my copy to make it easier to understand. I think I have solved my issues with the characters ', \, and ", but I feel that there may still be issues, I'll start worrying about that once people start posting. I'm trying to fix this, once I correct it I will change the source. I tried to make my code as generic as possible so you or me could easily change the post structure and content, remove restrictions, add restrictions, etc. </p>
 		</div><br/>
 		<pre class="code">
-&#60;!DOCTYPE html>
-&#60;html>
+&#60;!DOCTYPE html>&#60;html>
 	&#60;head>
-		&#60;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		&#60;meta name="freedom" content="open source"/>&#60;meta name="description" content="DV Tate Testa's chat room"/>
+		&#60;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		&#60;meta name="description" content="DV Tate Testa's chat room"/>
 		&#60;meta name="author" content="Dustin Van Tate Testa"/>
 		&#60;meta name="keywords" content="tate testa dustin van freshman blacksmith fish forge programming Dustin Van Tate Testa math calculators blog forum talk"/>
 		&#60;meta name="start-date" content="4-6-2015"/>&#60;meta name="edit-date" content="4-11-2015"/>
 		&#60;title>Chat Room - Tate's Website&#60;/title>
-		&#60;link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-		&#60;link rel="stylesheet" type="text/css" href="http://www.dvtate.com/styles/nyental.css"/>
-		&#60;style type="text/css">table#sprog{max-width: 100%;}&#60;/style>
+		&#60;link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+		&#60;link rel="stylesheet" type="text/css" href="//dvtate.com/styles/nyental.css"/>
 		&#60;script src="https://apis.google.com/js/platform.js" async defer>&#60;/script>&#60;!--Google+1-->
-		&#60;style type="text/css" id="talksyle">#block{border:1px solid #000;}
-			input#postit{display:block;border:1px solid #000;background-color:#EAEAEA;}
-			a#lyse{color: #090;font-family:'Ubuntu', sans-serif; height: 15px;}
-		&#60;/style>&#60;script language="javascript" type="text/javascript">&#60;!--//tab button adds tab to post
+		&#60;style type="text/css" id="talksyle">#block{border:1px solid #000;}input#postit{display:block;border:1px solid #000;background-color:#EAEAEA;}a#lyse{color: #090;font-family:'Ubuntu', sans-serif; height: 15px;}&#60;/style>
+		&#60;script language="javascript" type="text/javascript">&#60;!--//tab button adds tab to post
 			function enabletabbing(){
 				var textareas=document.getElementsByTagName('textarea');
-				var count=textareas.length;//number of textasreas
-				for(var i=0;i&#60;count;i++){//iterate through textareas
-					textareas[i].onkeydown=function(e){//change behavior for tab key
+				var count=textareas.length;
+				for(var i=0;i&#60;count;i++){
+					textareas[i].onkeydown=function(e){
 						if(e.keyCode==9||e.which==9){
-							e.preventDefault();var s=this.selectionStart;
-							this.value=this.value.substring(0,this.selectionStart)+
-							"\t"+this.value.substring(this.selectionEnd);
+							e.preventDefault();
+							var s=this.selectionStart;
+							this.value=this.value.substring(0,this.selectionStart)+"\t"+
+							this.value.substring(this.selectionEnd);
 							this.selectionEnd=s+1;
-						}
-					}
-				}
-			}//-->
+			}}}chkin()}//-->
 		&#60;/script>&#60;script language="javascript" type="text/javascript">&#60;!--adds blocks
 			function addblock(type){
 				if(type==3)document.postdat.msg.value+="\n[code]\nenter code here\n[/code]";
 				else if(type==2)document.postdat.msg.value+="[underline]put text here[/underline]";
 				else if(type==1)document.postdat.msg.value+="[bold]put text here[/bold]";
+			}
+			function chkin(){//pronounced chicken
+				if(document.getElementById("brugersNavn").value!=""&&document.getElementById("msgin").value!="")
+					document.getElementById("newpost").style.borderLeft="20px solid green";
+				else document.getElementById("newpost").style.borderLeft="20px solid red";
 			}//-->
 		&#60;/script>&#60;script type="text/javascript">&#60;!--//Google Analytics
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -58,17 +57,19 @@
 	&#60;/head>
 	&#60;body onload="enabletabbing()">
 		&#60;ul class="pages">&#60;!--page-link menu-->
-			&#60;li class="page" id="home">&#60;a class="here" href="http://www.dvtate.com/">Home&#60;/a>&#60;/li>
-			&#60;li class="page" id="icategory" onclick="">&#60;a class="page">Hobbies&#60;span id="idevice">&#60;/span>&#60;/a>
+			&#60;li class="page" id="home">&#60;a class="here" href="//dvtate.com/">Home&#60;/a>&#60;/li>
+			&#60;li class="page" id="icategory" onclick="">&#60;a class="page">Hobbies&#60;/a>
 				&#60;ul class="dpages" id="hob">
-					&#60;li class="dpage">&#60;a class="page" href="http://www.dvtate.com/prog/" >Programming&#60;/a>&#60;/li>
-					&#60;li class="dpage">&#60;a class="page" href="http://www.dvtate.com/3d/" >3d modelling&#60;/a>&#60;/li>
-					&#60;li class="dpage">&#60;a class="page" href="http://www.dvtate.com/forge/" >Blacksmithing&#60;/a>&#60;/li>
-					&#60;li class="dpage">&#60;a class="page" href="http://www.dvtate.com/lab/" >The Lab&#60;/a>&#60;/li>
-					&#60;li class="dpage">&#60;a class="page" href="http://www.dvtate.com/tanks/" >My Aquariums&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/prog/" >Programming&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/3d/" >3d modelling&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/forge/" >Blacksmithing&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/lab/" >The Lab&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/tanks/" >My Aquariums&#60;/a>&#60;/li>
+					&#60;li class="dpage">&#60;a class="page" href="//dvtate.com/os/" >Operating Systems&#60;/a>&#60;/li>
 				&#60;/ul>
-			&#60;/li>&nbsp;&#60;li class="page" id="category">&#60;a class="page" href="http://www.dvtate.com/chat/">Chat&#60;/a>&#60;/li>
-			&#60;li class="page" id="category">&#60;a class="page" href="http://www.dvtate.com/calc/">Calculators&#60;/a>&#60;/li>
+			&#60;/li>&nbsp;&#60;li class="page" id="category">&#60;a class="page" href="//dvtate.com/chat/">Chat&#60;/a>&#60;/li>
+			&#60;li class="page" id="category">&#60;a class="page" href="//dvtate.com/calc/">Calculators&#60;/a>&#60;/li>
+			&#60;li class="page" id="category">&#60;a class="page" href="//dvtate.com/school/">College&#60;/a>&#60;/li>
 		&#60;/ul>&#60;?php
 			$nameErr=$msgErr=" ";#bad name/no content
 			if($_SERVER["REQUEST_METHOD"]=="POST"){verify();}
@@ -76,13 +77,15 @@
 				//in future checks account/login data
 				$name=$_POST['navn'];$msg=$_POST['msg'];#get data fra form
 				$name=trim($name);$err = false;
-				if($name===""|| $name==="tate"||$name==="Tate"||$name==="Admin"||$name==="Mod"){$err = true;$GLOBALS['nameErr']="&#60;span id=\"badinp\">*Chose another name&#60;/span>";}
+				if($name===""|| $name==="tate"||$name==="Tate"||$name==="Admin"||$name==="Mod")
+					{$err = true;$GLOBALS['nameErr']="&#60;span id=\"badinp\">*Chose another name&#60;/span>";}
 				if($name===""){$err = true;$GLOBALS['nameErr']="&#60;span id=\"badinp\">*Name Required&#60;/span>";}
 				if($msg===""){$GLOBALS['msgErr']="&#60;span id=\"badinp\">*Content Required&#60;/span>";}
 				if($err){return;}//prevent post on error
 				$msg=convertchars($msg);//convert approved tags
-				$name=fixname($name);//make $name safe
+				$name=fixname($name);
 				addpost($name, $msg);//Add/process post
+				return;
 			}
 			function convertchars($msg){//converts MY code, underline and bold tags to HTML, stops HTML injection,formats code
 				$msg=str_replace("&#60;", "&lt;", $msg);//void html
@@ -114,15 +117,15 @@
 			}function processblocks($startblock, $endblock, $msg){
 				$diff=countmissingends($startblock, $endblock,$msg);
 				if($diff>0){//if too many start blocks
-					for($i=0;$i&#60;$diff; $i++){//add additional endblocks
+					for($i=0;$i&#60;$diff; $i++){
 						$msg .= $endblock;
 					}
 				}elseif($diff&#60;0){//too many end tags
-					$msgholder=$msg;//copy $msg
+					$msgholder=$msg;
 					$msg="";
-					for($i=0;$i>$diff; $i--){//add additional startblocks
+					for($i=0;$i>$diff; $i--){
 						$msg.= $startblock;
-					}$msg.=$msgholder;//put copied $msg at end
+					}$msg.=$msgholder;
 				}return $msg;
 			}function countmissingends($startblock, $endblock,$msg){//returns difference between the number of starting tags and ending tags
 				$testmsg=$msg;//prevents destruction of $msg
@@ -133,51 +136,50 @@
 			}
 			function fixname($name){//prevents html in name
 				$name=str_replace("&#60;", "&lt;", $name);//void html
-				$name=str_replace("\\\\n", "&#92;n",$name);//'\n'
-				$name=str_replace("\\\\t", "&#92;t",$name);//'\t'
-				$msg=str_replace("\\\\", "&#92;",$msg);//backslashes
+				$name=str_replace("\\\\n", "&#92;n",$name);//html char voids '\n'
+				$name=str_replace("\\\\t", "&#92;t",$name);//html char voids '\t'
 				return $name;
 			}
 			function addpost($name, $msg){//writes post to thread file
-				$post=makepost($name, $msg);//convert to HTML
-				$post.=file_get_contents('thread.txt');//add the thread to $post
-				file_put_contents('thread.txt', $post);//replace contents of file with $post
+				$post=makepost($name, $msg);
+				$post.=file_get_contents('thread.txt');
+				file_put_contents('thread.txt', $post);
 				return;
 			}function addposttobottom($name, $msg){//writes post to thread file
-				$file=fopen("thread.txt","a");
-				fwrite($file, makepost($name, $msg));//add converted post to the end of file
+				$file = fopen("thread.txt","a");
+				fwrite($file, makepost($name, $msg));
 				fclose($file);
 				return;
 			}function makepost($name, $msg){//creates the html for the post from the information given
-				$mydate=getdate(date("U"));//check date
-				$date="$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";//convert date into a string
-				$post="\n&#60;div id=\"post\">&#60;table id=\"iconname\">&#60;tr>&#60;td>&#60;img id=\"ico\" src=\"http://www.dvtate.com/chat/guest.png\"  height=\"80px\" alt=\"profile picture\" title=\"Guest\" />&#60;/td>&#60;td id=\"info\">&#60;b>Name&#60;/b>: ";
-				$post.=$name;
-				$post.= " &#60;br/> &#60;b>Date&#60;/b>: ";
-				$post.=$date;
+				if($name==="PASSWORD_GOES_HERE"){//password as name means admin post (extremely insecure but idc)
+					$post="\n&#60;div id=\"post\">&#60;table id=\"iconname\">&#60;tr>&#60;td>&#60;img id=\"ico\" src=\"//dvtate.com/chat/admin.jpg\"  height=\"80px\" alt=\"profile picture\" title=\"SysAdmin: Can edit and/or delete your posts.\"/>&#60;/td>&#60;td id=\"info\">&#60;b>Name&#60;/b>: Tate";
+				}else{
+					$post="\n&#60;div id=\"post\">&#60;table id=\"iconname\">&#60;tr>&#60;td>&#60;img id=\"ico\" src=\"//dvtate.com/chat/guest.png\" height=\"80px\" alt=\"profile picture\" title=\"Guest\" />&#60;/td>&#60;td id=\"info\">&#60;b>Name&#60;/b>: ";
+					$post.=$name;
+				}$post.= " &#60;br/> &#60;b>Date&#60;/b>: ";
+				$date=getdate(date("U"));//check date
+				$post.="$date[weekday], $date[month] $date[mday], $date[year]";//convert date into a string
 				$post.="&#60;/td>&#60;/tr>&#60;/table>&#60;div class=\"msg\">&#60;object>";
 				$post.=$msg;
 				$post.="&#60;/object>&#60;/div>&#60;/div>&#60;br/>\n";
 				return $post;
 			}
-
 			function getthread(){//returns the current blog as text/html from file
-				$filename = "thread.txt";
-				$file = fopen( $filename, "r" );
-				if( $file == false ){//failed to open file(not good)
+				$filename="thread.txt";
+				$file=fopen($filename, "r");
+				if($file==false){//failed to open file(not good)
 				   return "&#60;div class=\"main\">&#60;h2>&#60;u>This is embarrassing&#60;/u>:&#60;/h2>&#60;hr/>There was an error, please try again later&#60;/div>";
-				}$filesize = filesize( $filename );//length of file
-				$filetext = fread( $file, $filesize );//set $filetext to the value of the file
+				}$filesize=filesize($filename);//length of file
+				$filetext=fread($file, $filesize);//set $filetext to the value of the file
 				fclose($file);
 				return $filetext;
 			}
 		?>
 		&#60;div class="main" id="newpost">&#60;h2>&#60;strong>Post Something:&#60;/strong>&#60;/h2>
 			&#60;form action="default.php" id="postdat" name="postdat" method="post">
-				&#60;h4 style="display: inline">Name:&#60;/h4>&#60;input type="text" name="navn" placeholder="ie- John Smith" required="true" title="What is your name? What do you go by?"/>&#60;?php echo $nameErr; ?>
-				&#60;table width="100%">&#60;tr>
+				&#60;h4 style="display: inline">Name:&#60;/h4>&#60;input type="text" name="navn" id="brugersNavn" placeholder="ie- John Smith" onKeyUp="chkin()" required="true" title="What is your name? What do you go by?"/>&#60;?php echo $nameErr; ?>&#60;table width="100%">&#60;tr>
 					&#60;td>&#60;div id="msgwrap">
-						&#60;textarea ng-model="mytext" ng-allow-tab required="true" id="msgin" rows="10" cols="100" name="msg" form="postdat" placeholder="What's up?" title="What do you want to say?">&#60;/textarea>
+						&#60;textarea ng-model="mytext" onKeyUp="chkin()" ng-allow-tab required="true" id="msgin" rows="10" cols="100" name="msg" form="postdat" placeholder="What's up?" title="What do you want to say?">&#60;/textarea>
 					&#60;/div>&#60;/td>&#60;td id="insertbtns">
 						&#60;div id="insertbtns">&#60;!--insert blocks-->
 							&#60;input type="button" id="block" value="Bold" onclick="addblock(1)"/>
@@ -189,17 +191,18 @@
 				&#60;/tr>&#60;/table>&#60;input type="submit" id="postit" value="Post" title="Send your message" />&#60;?php echo $msgErr; ?>
 			&#60;/form>
 		&#60;/div>&#60;br/>&#60;?php echo getthread();//print the blog?>
-		&#60;center>&#60;a href="http://www.dvtate.com/chat/source.html/" target="_blank" id="lyse">View Source&#60;/a>
-			&#60;a id="hostbtn" class="ad" href="http://www.000webhost.com/" target="_blank" align="center">
-				&#60;img src="http://www.000webhost.com/images/80x15_powered.gif" alt="Web Hosting" width="80" height="15" border="0" />&#60;!--host ad-->
+		&#60;center>&#60;a href="//dvtate.com/chat/source.html" target="_blank" id="lyse">View Source&#60;/a>
+			&#60;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.">
+				&#60;img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
 			&#60;/a>&#60;div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height="15" data-rel="{relationshipType}">&#60;/div>&#60;!--g+ follow-->
-			&#60;div class="g-plusone" data-size="small" data-annotation="inline" data-width="300" data-href="http://www.dvtate.com/chat/">&#60;/div>&#60;!--g+1-->
+			&#60;div class="g-plusone" data-size="small" data-annotation="inline" data-width="300">&#60;/div>&#60;!--g+1-->
 		&#60;/center>&#60;script type="text/javascript">var downloadLink = document.getElementById('button');addListener(downloadLink,'click',function(){ga('send','event','button','click','postedsomething');});
 			function addListener(element,type,callback){if(element.addEventListener)element.addEventListener(type, callback);
 			else if(element.attachEvent)element.attachEvent('on' + type, callback);}
 		&#60;/script>
 	&#60;/body>
 &#60;/html>
+	
 		</pre><script type="text/javascript">alert("\t\tNOTE:\nThe source of the page has changed and this page is no longer 100% accurate.</script>
 	</body>
 </html>
