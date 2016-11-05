@@ -101,7 +101,6 @@
 						<li><b>2016.8.15</b>: realized that <a href="https://plus.google.com/+Tatetesta/posts/AYFf3A2wsbC" target="_blank">my school district was blocking my website</a>... those bastards.</li>
 						<li><b>2016.8.1</b>: School starts. 5 AP Classes. This is gonna be difficult.</li>
 						<li><b>2016.7.19</b>: GHP over (T.T) {sleep's for 3 days straight} {made some great friends}</li>
-						<li><b>2016.6.25</b>: got addicted to League of Legends (I'm @ridderhoff)</li>
 						<li><b>2016.6.19</b>: went to GHP for software and electrical engineering.</li>
 						<li><b>2016.6.5</b>: began developing <a href="https://github.com/dvtate/rpn/" target="_blank">my own scripting language</a>.</li>
 						<li><b>2016.4.4</b>: parents threw server out of window because they didn't like my GF... (qwq)</li>
