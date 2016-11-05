@@ -62,7 +62,7 @@
 			<a href="//dvtate.com/healthit/dr-type.php">Find a Doctor</a><br/>
 		</div><div id="dimbag" onclick="shsidemenu()"></div>
 		<div class="page">
-			<div class="showfakeback"><h1>Paid <?php echo "dfbdbsfbsknjnflkbkdjs"; ?> Doctors:</h1>
+			<div class="showfakeback"><h1>Paid Doctors:</h1>
 				<!--php - finde og erstatte med og ny konto-->
 				<a href="//dvtate.com/healthit/paid/dvtt/"><div class="pagebox">
 					<img class="profileimg" alt="user-foto" src="<?php echo file_get_contents(dirname(__DIR__).'/dvtt/imgurl.txt'); ?>"/>
