@@ -86,7 +86,7 @@
 				<li class="opage"><a class="opage" id="ubpl" href="//dvtate.com/os/ubuntu">Ubuntu</a></li>
 				<li class="opage"><a class="opage" id="elempl" href="//dvtate.com/os/elementary">Elementary OS</a></li>
 			</ul><h2><strong>How  I got Started</strong></h2><ul>
-				<p class="ind">My first desktop operating system other than windows was as usual Ubuntu, my friend Sebastian installed it onto a netbook which I accidentally wiped the hard drive on. I was really surprised by Linux, I had seen some support for it on a few rare websites, (ie- <a href="http://www.monodevelop.com/" target="_blank">MonoDevelop</a>), but I had figured, that it was just for computer nerds and it wouldn't have a [proper] desktop environment or would be almost impossible to use because everything is in the terminal, but my assumptions were completely wrong. I found Ubuntu very easy to work with, and when I couldn't figure something out, I could just Google it, and I learned how  to copy and paste into the terminal. eventually, my main laptop(at the time) got a number of nasty viruses (some were my fault click <a onclick="cdstory()" style="color:blue;">here</a> for my explanation) including the Sendori virus. So I tried Debian wheezy with KDE, but eventually settled on Debian Gnome. Eventually I got good enough to multi-boot, so by joining in the windows insider program, I got a copy of windows 10, and then installed Arch Linux and Ubuntu, onto a laptop that I had to replace the hard drive on. Although I haven't switched all of my computers, my primary OS is now Arch Linux, With Debian as a close second.</p>
+				<p class="ind">My first desktop operating system other than Windows was Ubuntu 12.04, my friend Sebastian installed it onto a netbook which I had accidentally wiped the hard drive on. I was really surprised by Linux, I had seen some support for it on a few rare websites, (ie- <a href="http://www.monodevelop.com/" target="_blank" title="of all the websites I remembered, its the C# one that I remember the best... strange, eh?">MonoDevelop</a>), but I had figured, that it was just for computer nerds and it wouldn't have a [proper] desktop environment or would be almost impossible to use because everything is in the terminal, but my assumptions were completely wrong. I found Ubuntu very easy to work with, and when I couldn't figure something out, I could just Google it, and I learned how  to copy and paste into the terminal. Eventually, my main laptop (at the time) got a number of nasty viruses (<a onclick="cdstory()" style="color:blue;">some were my fault </a>) including the Sendori virus. So I tried Debian wheezy with KDE, but eventually settled on Debian Gnome. Eventually I got good enough to multi-boot, so by joining in the windows insider program, I got a temporary copy of windows 10, and then installed Arch Linux and Ubuntu, onto a laptop that I had to replace the hard drive on. I <span title="2016.12">now</span> have Arch Linux installed on all of my computers, and my desktop dual-boots (separate HDD) with windoze 10. I only dual-boot as I want to have a native windows installation to test software on (most of <a href="https://github.com/dvtate/">my software</a> is cross-platform). Given <a href="https://www.gnu.org/proprietary/malware-microsoft.en.html">the darker features of Windows 10</a>, I would not reccomend it to anyone.</p>
 			</ul><center><img src="//dvtate.com/os/logos/deb.jpg" height="200px" alt="debian logo"/><img height="200px" src="//dvtate.com/os/logos/arch.png" alt="arch linux logo"/><img src="//dvtate.com/os/logos/ubuntu.png" height="200px" alt="ununtu logo" /><img src="//dvtate.com/os/logos/elem.png" height="200px" alt="elementary os logo" />
 		</div><br/><?php
 			$nameErr=$osErr=$emailErr=" ";#no content/bad format
@@ -190,11 +190,12 @@
 			</ul>
 		</div><br/>
 		<?php echo getthread("thread.txt"); ?>
-		<center>
-			<a id="hostbtn" class="ad" href="http://www.000webhost.com/" target="_blank" align="center">
-				<img src="http://www.000webhost.com/images/80x15_powered.gif" alt="Web Hosting" width="80" height="15" border="0" /><!--host ad-->
+		<style type="text/css">span#social_footer{background-color:rgba(0,0,0,0.5);border-radius:3px;color:#00FF00 !important;}</style>
+		<center><span id="social_footer">
+			<a rel="license" id="social_footer_lic" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.">
+				<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
 			</a><div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height='15' data-rel="{relationshipType}"></div><!--g+ follow-->
-			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div><!--google+1-->
+			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div><!--google+1--></span>
 		</center>
 	</body>
 </html>
