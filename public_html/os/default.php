@@ -34,6 +34,13 @@
 			span#badinp{display:inline;}
 		</style>
 		<script type="text/javascript"><!--//
+			function isValidEmail(){
+				var x=document.forms["osform"]["email"].value;
+				var atpos=x.indexOf("@");
+				var dotpos=x.lastIndexOf(".");
+				if(atpos<1||dotpos<atpos+2||dotpos+2>=x.length){return false;}
+				return true;
+			}
 			var osnumber=1, os2open=false,os3open=false,os4open=false;
 			function shownext(){osnumber++;//unhides and enables the input boxes
 				if(osnumber==2){os2open=true;
@@ -47,9 +54,14 @@
 					document.getElementById("anotherosbtn").value="No Suggestions Left";
 				}chkin();return;
 			}function chkin(){//make left border red if there is missing content(if content is missing && inputbox is active)
-				if(document.getElementById("os1").value.trim()==""||(document.getElementById("os2").value.trim()==""&&os2open==true)||(document.getElementById("os3").value.trim()==""&&os3open==true)||(document.getElementById("os4").value.trim()==""&&os4open==true)||document.getElementById("navn").value.trim()==""||document.getElementById("email").value.trim()==""){
+				if(!isValidEmail()||document.getElementById("os1").value.trim()==""||(document.getElementById("os2").value.trim()==""&&os2open==true)||(document.getElementById("os3").value.trim()==""&&os3open==true)||(document.getElementById("os4").value.trim()==""&&os4open==true)||document.getElementById("navn").value.trim()==""||document.getElementById("email").value.trim()==""){
 					document.getElementById("nyos").style.borderLeft="20px solid red";
+					document.getElementById("postit").disabled=true;
 				}else{document.getElementById("nyos").style.borderLeft="20px solid green";}
+				if (!isValidEmail()&&document.forms["osform"]["email"].value!=""){
+					document.forms["osform"]["email"].style.border="2px solid red";
+					document.getElementById("postit").disabled=false;
+				}else{document.forms["osform"]["email"].style.removeProperty('border');}
 			}
 			function cdstory(){alert("When taking apart an old computer, I found an unlabled CD in the bay, I put it into my laptop"+
 			"to see what was on it, after a minute or so of going through the files(looked strange), My [lousy] antivirus flared up with "+
@@ -182,7 +194,7 @@
 			<h2><strong>Suggest an OS:</strong></h2><ul>
 				<form action="default.php" id="osform" name="postdat" method="post">
 					<h4 style="display:inline">Name:</h4> <input type="text" name="navn" id="navn" onkeyup="chkin()" placeholder="ie-Joe" required="true" title="What do you want your name to show up as?"/><?php echo $nameErr; ?><br/>
-					<h4 style="display:inline">Email:</h4> <input type="text" name="email" id="email" onkeyup="chkin()" placeholder="example@gmail.com" required="true" title="Your email is used to prevent spam on my website. As a token of respect, I won't send you spam."/><?php echo $emailErr; ?><br/>
+					<h4 style="display:inline">Email:</h4> <input type="email" name="email" id="email" onkeyup="chkin()" placeholder="example@gmail.com" required="true" title="Your email is used to prevent spam on my website. As a token of respect, I won't send you spam."/><?php echo $emailErr; ?><br/>
 					<!--<h4 style="display:inline">Website:</h4> http://<input type="text" name="email" id="email" onkeyup="chkin()" placeholder="google.com (blank for none)" required="true" title="If you have a website, your name will become a link to it."/><br/><!--determined to be too much code work and no one will use this-->
 					<h4 style="display:inline">Suggested Operating Systems:</h4> <input type="text" name="os_1" id="os1" onkeyup="chkin()" required="true" placeholder="ie-MS-DOS" title="Pick an Operating System that you recommend I try, and write about"/><input type="text" onkeyup="chkin()" name="os_2" id="os2" placeholder="ie-MS-DOS" title="Pick an Operating System that you recommend I try, and write about on this webpage"/><input type="text" name="os_3" id="os3" onkeyup="chkin()" placeholder="ie-MS-DOS" title="Pick an Operating System that you recommend I try, and write about on this webpage"/><input type="text" name="os_4" id="os4" placeholder="ie-MS-DOS" onkeyup="chkin()" title="Pick an Operating System that you recommend I try, and write about on this webpage"/><input type="button" id="anotherosbtn" onclick="shownext()" value="Suggest Another (1/4)"/><?php echo $osErr; ?>
 					<ul><input type="submit" id="postit" value="Submit" title="Send your message" title=""/></ul>
