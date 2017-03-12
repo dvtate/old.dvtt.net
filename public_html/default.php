@@ -208,12 +208,6 @@
 				<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
 			</a><div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height='15' data-rel="{relationshipType}"></div><!--g+ follow-->
 			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div><!--google+1--></span>
-			<script>
-				(function makeGplusGreen(){
-					document.getElementById("social_footer").lastElementChild.id = "gplusonebutton";
-					frames["gplusonebutton"].document.getElementByTagN.style.color = "#00ff00";
-				})();
-			</script>
 		</center>
 	</body>
 </html>
