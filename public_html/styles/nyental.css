@@ -1,3 +1,4 @@
+/*this is a semi-minimalized stylesheet... have fun reading it :/ */
 /*structure*/
 html{font-size:112.5%;}
 body{min-width:450px;font-family:sans-serif;
@@ -38,7 +39,7 @@ td.nybox{background-color:#efefef;display:inline-block;
 /*prog compatibility (page menu)*/
 ul.opages{list-style-type:none;margin:0;padding:0;overflow:hidden;position:absolute;}
 li.opage{float:right;list-style-type:none;}
-a.opage{-webkit-transition:text-shadow 2s;/* For Safari 3.1 to 6.0 */ transition: text-shadow 0.5s;}
+a.opage{-webkit-transition:text-shadow 2s;/*Safari 3.1-6.0*/transition:text-shadow 0.5s;}
 a.opage:link,a.opage:visited{display:block;width:200px;font-weight:bold;
 	color:#FFF;background-color:#3399FF;text-align:center;
 	padding:4px;text-decoration:none;text-transform:uppercase;
@@ -50,6 +51,11 @@ div.lefttoppopup{background-color:#FFF;border:1px solid #000;opacity:1;
 }div.dimbag{position:fixed;/*var:absolute*/top:0;bottom:0;left:0;right:0;
 	background-color:#FFF;opacity:0.8;z-index:1001;
 }h1#poptitle{margin-left:2%;}
+/*custom scrollbars*/
+::-webkit-scrollbar{width:8px;opacity:0.0;}
+::-webkit-scrollbar-track{opacity:0.0;}
+::-webkit-scrollbar-thumb{border:1px solid grey;border-radius:10px;opacity:1;background-color:#fff;}
+::-webkit-scrollbar-thumb:hover{background-color:darkgrey;border:1px solid grey;}
 /*chat room::posts*/
 div#post{border:3px solid #647083;border-radius:3px;
 	text-rendering:optimizeSpeed;margin:0% 6%;
@@ -61,9 +67,9 @@ div#post{border:3px solid #647083;border-radius:3px;
 /*code blocks & containers*/
 pre#code{overflow-x:scroll;border:1px solid #000;text-align:left;
 	word-spacing:-1px;line-height:1.5;padding:5px;
-}pre.syntax{border:1px solid #000;white-space:pre-wrap;/* CSS 3 */
-	white-space:-moz-pre-wrap;/* Mozilla, since 1999 */
-	white-space:-pre-wrap;/* Opera 4-6 */white-space:-o-pre-wrap;/* Opera 7 */
+}pre.syntax{border:1px solid #000;white-space:pre-wrap;/*CSS3*/
+	white-space:-moz-pre-wrap;/*Mozilla since 1999*/
+	white-space:-pre-wrap;/*Opera 4-6*/white-space:-o-pre-wrap;/*Opera 7*/
 	word-wrap:break-word;text-align:left;
 }pre.code{overflow-x:scroll;border:1px solid #000;text-align:left;
 	word-spacing:-1px;line-height:1.5;padding:5px;
@@ -81,5 +87,4 @@ input#bad{border:1px solid red;box-shadow:0px 0px 0.25em red;background-color:#e
 input#block{display:block;border:1px solid #000;background-color:#eaeaea;}span#badinp{color:red;}
 img#ico{border:1px solid grey;border-radius:5px;background-color:#fff;}
 table.str, tr.str, th.str, td.str{vertical-align:top;}.title{text-align:center;}p.ind{text-indent:50px;}
-h2,h3,h1,h4,h6{font-family:'Ubuntu', 'Lucida Sans Unicode', 'Lucida Grande', Helvetica, sans-serif;}
-
+h2,h3,h1,h4,h6{font-family:'Ubuntu','Lucida Sans Unicode','Lucida Grande',Helvetica,sans-serif;}
