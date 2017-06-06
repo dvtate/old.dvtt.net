@@ -15,63 +15,56 @@
 			div#how_container{border:1px solid #000;border-radius:5px;margin:5px;}
 			p.ind,h4,h3{margin-left:5px;}div#google_canvas{height:600px;}
 		</style><script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
-		<script type="text/javascript"><!--//Google Analytics
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-59746939-2', 'auto');ga('send', 'pageview');//-->
-		</script>
+		<script src="https://dvtate.com/scripts/main.js"></script>
 	</head>
-	<body onload="redrawmap">
-		<ul class="pages"><!--page-link menu-->
-			<li class="page" id="home"><a class="here" href="//dvtate.com/">Home</a></li>
-			<li class="page" id="icategory" onclick=""><a class="page">Hobbies</a>
-				<ul class="dpages" id="hob">
-					<li class="dpage"><a class="page" href="//dvtate.com/prog/" >Programming</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/3d/" >3d modelling</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/forge/" >Blacksmithing</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/lab/" >The Lab</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/tanks/" >My Aquariums</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/os/" >Operating Systems</a></li>
-				</ul>
-			</li>&nbsp;<li class="page" id="category"><a class="page" href="//dvtate.com/chat/">Chat</a></li>
-			<li class="page" id="category"><a class="page" href="//dvtate.com/calc/">Calculators</a></li>
-			<li class="page" id="category"><a class="page" href="//dvtate.com/school/">College</a></li>
-		</ul><div class="main">
+	<body onload="removeHostAd(); redrawmap();">
+		<ul id="nav"></ul><script>genNavBar("nav");</script>
+		<div class="main">
 			<h1><b>I'm Thinking About</b>:</h1><ul>
 				<table id="skole_choice"><tr><td id="skole_logo"></td><td><p class="ind" id="om_skole">Waiting for your location</p></td></tr></table>
 			</ul><div id="how_container"><div id="showhide" onclick="showhidehow()"><h3>How I chose <a id="showhide_txt"></a></h3></div>
 				<div id="how"><hr/>
-					<p class="ind">This page doesn't give a uniform result about which college I want to attend. This page first gets your location, and picks a college I've chosen for your location. The default is Georgia tech. If you're in New England (USA), you should see MIT, if you are in Europe, you should see DTU, if you are on the gulf coast (Alabama through Louisiana), you should see Auburn, if you are near the west coast, you should see CalTech. If you are anywhere else, Georgia tech should appear. Because Google's geolocation API isn't perfect the map below will show you where my page thinks you are and not your exact location.</p>
+					<p class="ind">This page doesn't give a uniform result about which college I want to attend.
+						This page first gets your location, and picks a college I've chosen for your location.
+						The default is Georgia tech. If you're in New England (USA), you should see MIT, if you
+						are in Europe, you should see DTU, if you are on the gulf coast (Alabama through Louisiana),
+						you should see Auburn, if you are near the west coast, you should see CalTech. If you are
+						anywhere else, Georgia tech should appear. Because Google's geolocation API isn't perfect
+						the map below will show you where my page thinks you are and not your exact location.
+					</p><h4><b>Colleges I want to go to (2017):</b></h4><ol>
+						<li>CalTech: although I likely can't afford out of state tuitition, I do like this school.</li>
+						<li>GaTech: If I can get into this school, it's probably my best option.</li>
+						<li>DTU: I've always wanted to go to Denmark (Danish is my second language), and going to school there would be a dream.</li>
+						<li>MiT: MiT is definitely one of the most prestigious universities, but I've been told it's not for me.</li>
+						<li>SPSU/KSU: Although their campus is almost entirely male, they have good programs for what I'm interested in.</li>
+					</ol>
 					<div id="google_canvas"></div><!--becomes the map-->
 					<h4><b>Override Location</b>:<input type="button" value="CalTech" onclick="caltech()" /><input type="button" value="dtu" onclick="dtu()" /><input type="button" value="mit" onclick="mit()" />
 					<input type="button" value="auburn" onclick="auburn()" /><input type="button" value="gatech" onclick="gatech()" /></h4>
 				</div>
 			</div>
 		</div><center>
-			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.">
-				<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
-			</a><div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height='15' data-rel="{relationshipType}"></div><!--g+-->
-			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div><!--g+1-->
-		</center><script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+				  <div id="social_footer"></div>
+				  <script>genFooter("social_footer");</script>
+		</center>
+		<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 		<script type="text/javascript"><!--//geolocation script.
 			var lat,lon,open=false;
 			function gatech(){document.getElementById('om_skole').innerHTML=
 				"Located in Atlanta, Georgia, the Georgia Institute of Technology is a leading research university committed to improving the human condition through advanced science and technology.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"http://gatech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/gt.png\" alt=\"logo\"/></a>";
+				document.getElementById('skole_logo').innerHTML="<a href=\"//gatech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/gt.png\" alt=\"logo\"/></a>";
 			}function mit(){document.getElementById('om_skole').innerHTML=
 				"The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. One of the most prestigious universities in the field of engineering.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"http://mit.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/mit.png\" alt=\"logo\"/></a>";
+				document.getElementById('skole_logo').innerHTML="<a href=\"//mit.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/mit.png\" alt=\"logo\"/></a>";
 			}function dtu(){document.getElementById('om_skole').innerHTML=
 				"For almost two centuries DTU, Technical University of Denmark, has been dedicated to fulfilling the vision of H.C. &#216;rsted - the father of electromagnetism - who founded the university in 1829 to develop and create value using the natural sciences and the technical sciences to benefit society.</p><p class=\"ind\">Today, DTU is ranked as one of the foremost technical universities in Europe, continues to set new records in the number of publications, and persistently increase and develop our partnerships with industry, and assignments accomplished by DTU\'s public sector consultancy.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"http://www.dtu.dk/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/dtu.jpg\" alt=\"logo\"/></a>";
+				document.getElementById('skole_logo').innerHTML="<a href=\"//www.dtu.dk/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/dtu.jpg\" alt=\"logo\"/></a>";
 			}function auburn(){document.getElementById('om_skole').innerHTML=
-				"Auburn University has developed into one of the largest universities in the South, remaining in the educational forefront with its traditional blend of arts and applied science, and changing with the needs of today while living with a respect for the traditions and spirit that are Auburn.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"http://auburn.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/au.jpg\" alt=\"logo\"/></a>";
+				"Auburn University has developed into one of the largest universities in the South, remaining in the educational forefront with its traditional blend of arts and applied science, and changing with the needs of today while living with a respect for the traditions and spirit that are Auburn. (My stepfather went here)";
+				document.getElementById('skole_logo').innerHTML="<a href=\"//auburn.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/au.jpg\" alt=\"logo\"/></a>";
 			}function caltech(){document.getElementById('om_skole').innerHTML=
 				"Caltech is a world-renowned and pioneering research and education institution dedicated to advancing science and engineering.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"http://caltech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/cali.png\" alt=\"logo\"/></a>";
+				document.getElementById('skole_logo').innerHTML="<a href=\"//caltech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/cali.png\" alt=\"logo\"/></a>";
 			}
 			function redrawmap(){
 				if(!!navigator.geolocation){var map;
