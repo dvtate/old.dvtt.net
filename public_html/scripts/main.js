@@ -26,7 +26,7 @@ function genNavBar(id) {
 
 
 // inserts a social footer to the site
-function makeFooter(id) {
+function genFooter(id) {
 	var foot = document.getElementById(id);
 	foot.innerHTML = "<a rel=\"license\" id=\"social_footer_lic\" href=\"http://creativecommons.org/licenses/by-sa/4.0/\"\
 			  target=\"_blank\" title=\"This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\">\
