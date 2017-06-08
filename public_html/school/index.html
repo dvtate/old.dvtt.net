@@ -100,13 +100,15 @@
 				else alert("ERROR:\n Geolocation is not supported by this browser");
 			})();
 			
-			(function showhidehow(){
+			function showhidehow(){
 				if(open){document.getElementById('how').style.display="block";
 					document.getElementById('showhide_txt').innerHTML="[hide]";redrawmap();
 				}else{document.getElementById('how').style.display="none";
 					document.getElementById('showhide_txt').innerHTML="[show]";
 				}open=!open;
-			})();//-->
+			}
+
+			showhidehow();//-->
 		</script>
 	</body>
 </html>
