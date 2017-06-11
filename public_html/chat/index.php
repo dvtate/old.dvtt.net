@@ -163,7 +163,7 @@
 			}
 		?>
 		<div class="main" id="newpost"><h2><strong>Post Something:</strong></h2>
-			<form action="default.php" id="postdat" name="postdat" method="post">
+			<form action="index.php" id="postdat" name="postdat" method="post">
 				<h4 style="display: inline">Name:</h4><input type="text" name="navn" id="brugersNavn" placeholder="ie- John Smith" onKeyUp="chkin()" required="true" title="What is your name? What do you go by?"/><?php echo $nameErr; ?><table width="100%"><tr>
 					<td><div id="msgwrap">
 						<textarea ng-model="mytext" onKeyUp="chkin()" ng-allow-tab required="true" id="msgin" rows="10" cols="100" name="msg" form="postdat" placeholder="What's up?" title="What do you want to say?"></textarea>
