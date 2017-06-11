@@ -54,7 +54,7 @@
 		<meta name="description" content="A website devoted to the growing field of telemedicine. This page is currently under development. This site is built specifically for mobile devices."/>
 		<meta name="author" content="Dustin Van Tate Testa"/><title>HealthIT - Telemedicine</title>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="//dvtate.com/styles/m.nyental.css"/>
 		<style>div.pagebox{background-color:#fff;border:1px solid #333;
 				padding:10px;margin:3px 0;border-left:0;border-right:0;
