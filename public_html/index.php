@@ -9,13 +9,8 @@
 		<link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="//dvtate.com/styles/nyental.css"/>
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
-		<script type="text/javascript"><!--//Google Analytics
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-59746939-2', 'auto');ga('send', 'pageview');//-->
-		</script><style type="text/css">
+		<script src="//dvtate.com/scripts/main.js" type="text/javascript"></script>
+		<style type="text/css">
 			span#bubblealert{background-color:#f00;color:#fff;
 				border-radius:5px;border:2px solid #fff;
 			}sup>span#bubblealert{font-size:75%;}
@@ -59,7 +54,7 @@
 				}
 			}//-->
 		</script>
-	</head><body onLoad="makeGplusGreen()">
+	</head><body onLoad="removeHostAd()">
 		<?php #automates some content
 			function getpostcount(){//returns the number of posts
 				$threadtxt=file_get_contents('./chat/thread.txt');
@@ -73,21 +68,10 @@
 				if($match) return "<div class=\"dit\">".$match[1]."</div>";//return first post
 				else return "There was a major error attempting to read the votes. (contact me: toast27@gmail.com)";#missing thread
 			}
-		?><ul class="pages"><!--page-link menu-->
-			<li class="page" id="home"><a class="here" href="//dvtate.com/">Home</a></li>
-			<li class="page" id="icategory" onclick=""><a class="page">Hobbies</a>
-				<ul class="dpages" id="hob">
-					<li class="dpage"><a class="page" href="//dvtate.com/prog/">Programming</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/3d/">3d modelling</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/forge/">Blacksmithing</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/lab/">The Lab</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/tanks/">My Aquariums</a></li>
-					<li class="dpage"><a class="page" href="//dvtate.com/os/">Operating Systems</a></li>
-				</ul>
-			</li>&nbsp;<li class="page" id="category"><a class="page" href="//dvtate.com/chat/">Chat</a></li>
-			<li class="page" id="category"><a class="page" href="//dvtate.com/calc/">Calculators</a></li>
-			<li class="page" id="category"><a class="page" href="//dvtate.com/school/">College</a></li>
-		</ul><table class="row"><tr>
+		?>
+		<ul id="navbar"></ul>
+		<script>genNavBar("navbar");</script>
+		<table class="row"><tr>
 			<td class="nybox" id="col1row1" onclick="focusbox(1,1)">
 				<span id="col1row1sm" style="display: none" title="see how busy I've been and what has changed since last time">
 					<h2>Updates</h2>
@@ -199,15 +183,7 @@
 				</span>
 			</td>
 		</tr></table>
-		<style>
-			span#social_footer{background-color:rgba(0,0,0,0.5);border-radius:3px;color:#00FF00 !important;}
-			.gP{color:#00FF00!important;}
-		</style>
-		<center><span id="social_footer">
-			<a rel="license" id="social_footer_lic" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.">
-				<img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"/>
-			</a><div class="g-follow" data-href="https://plus.google.com/+Tatetesta" data-height='15' data-rel="{relationshipType}"></div><!--g+ follow-->
-			<div class="g-plusone" data-size="small" data-annotation="inline" data-width="300"></div><!--google+1--></span>
-		</center>
+		<center><span id="social_footer"></span></center>
+		<script>genFooter("social_footer");</script>
 	</body>
 </html>
