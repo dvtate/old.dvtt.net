@@ -55,18 +55,24 @@
 			}//-->
 		</script>
 	</head><body onLoad="removeHostAd()">
-		<?php #automates some content
-			function getpostcount(){//returns the number of posts
-				$threadtxt=file_get_contents('./chat/thread.txt');
-				return substr_count($threadtxt,"<div id=\"post\">");
-			}function getlatestpost(){//return latest post
+		<?php # automates some content
+			function getpostcount(){ // returns the number of posts
+				$threadtxt = file_get_contents('./chat/thread.txt');
+				return substr_count($threadtxt, "<div id=\"post\">");
+			}
+			function getlatestpost(){ // return latest post
 				preg_match("'<div id=\"post\">(.*?)</div></div>'si",file_get_contents('./chat/thread.txt'),$match);#put all post contents into array $matches[]
-				if($match) return "<div id=\"post\">".$match[1]."</div></div>";//return first post
-				else return "There was a major error attempting to read the contents of the chatroom. (contact me: toast27@gmail.com)";#missing thread
-			}function getlatestosvote(){
-				preg_match("'<div class=\"dit\">(.*?)</div>'si",file_get_contents('./os/thread.txt'),$match);#put all votes into array $matches[]
-				if($match) return "<div class=\"dit\">".$match[1]."</div>";//return first post
-				else return "There was a major error attempting to read the votes. (contact me: toast27@gmail.com)";#missing thread
+				if ($match)
+					return "<div id=\"post\">".$match[1]."</div></div>";//return first post
+				else # missing thread
+					return "There was a major error attempting to read the contents of the chatroom. (contact me: toast27@gmail.com)";
+			}
+			function getlatestosvote(){
+				preg_match("'<div class=\"dit\">(.*?)</div>'si", file_get_contents('./os/thread.txt'), $match); # put all votes into array $matches[]
+				if ($match)
+					return "<div class=\"dit\">".$match[1]."</div>"; // return first post
+				else
+					return "There was a major error attempting to read the votes. (contact me: toast27@gmail.com)";#missing thread
 			}
 		?>
 		<ul id="navbar"></ul>
@@ -80,14 +86,16 @@
 				</span><span class="lgfull" id="col1row1lg" onclick="resetboxes()">
 					<h2 title="see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
+						<li><b>2017.6.23</b>: began developing a <a href="https://github.com/robobibb/robobibb-steve-bot/" target="_blank">Telegram bot</a> (node.js) for my robotics team</b>
+						<li><b>2017.6.11</b>: registered cloudflare account, <a href="https://dvtate.com">https</a> enabled.</li>
+						<li><b>2017.6.5</b>: hosting provider changed service, minor changes</li>
 						<li><b>2017.3.8</b>: started working on <a href="https://robobibb.github.io" target="_blank">robotics team's website</a> with my programming team.</li>
 						<li><b>2016.10.2</b>: made a <a href="https://github.com/dvtate/dvtate.com" target="_blank">GitHub repo for this website</a> so you can see my source.</li>
 						<li><b>2016.8.20</b>: got annoied by my website's obsoleteness. Spiced things up with some Serial Experiments lain themed content and some <span title="from when my parents made me get off my gfs vps">minor fixes</span>.</li>
 						<li><b>2016.8.15</b>: realized that <a href="https://plus.google.com/+Tatetesta/posts/AYFf3A2wsbC" target="_blank">my school district was blocking my website</a>... those bastards.</li>
 						<li><b>2016.8.1</b>: School starts. 5 AP Classes. This is gonna be difficult.</li>
-						<li><b>2016.7.19</b>: GHP over (T.T) {sleep's for 3 days straight} {made some great friends}</li>
-						<li><b>2016.6.19</b>: went to GHP for software and electrical engineering.</li>
-						<li><b>2016.6.5</b>: began developing <a href="https://github.com/dvtate/rpn/" target="_blank">my own scripting language</a>.</li>
+						<li><b>2016.6.19</b>: went to GHP for software (and electrical) engineering.</li>
+						<li><b>2016.6.5</b>: began developing my own scripting language - <a href="https://github.com/dvtate/yoda/" target="_blank">YodaScript</a>.</li>
 						<li><b>2016.4.4</b>: parents threw server out of window because they didn't like my GF... (qwq)</li>
 						<li><b>2016.2.14</b>: parents decieded I should take a break from the computer.</li>
 						<li><b>2016.2.13</b>: Went public with my relationship to my GF.</li>
@@ -133,7 +141,7 @@
 				</span>
 			</td><td class="nybox" id="col3row1"  onclick="focusbox(3,1)" title="Recently added page">
 				<span id="col3row1sm" style="display:none">
-					<h2>It's New!</h2>
+					<h2>OS's</h2>
 				</span><span id="col3row1md">
 					<h2>Newest Page</h2><hr/>
 					<h4><a href="//dvtate.com/os/">Operating Systems</a></h4><?php echo getlatestosvote(); ?>
@@ -164,20 +172,20 @@
 					<h4>Right now I'm into Arch Linux</h4>
 				</span><span class="lgfull" id="col2row2lg" onclick="resetboxes()">
 					<img src="//dvtate.com/os/logos/arch.png" width="75%" id="archlinuxlogo" alt="arch linux logo"/>
-					<p class="ind">My first 3 attempts at Arch Linux were learning experiences, but I think I have gotten good enough to use it as an everyday operating system. What I love about Arch is you can make it into whatever you want. Also Arch is a rolling-release distro, so unlike Debian, I don't have to start over every 4 years. Also, Arch Linux has some of the newest software out there, and great tools for building and installing from it's massive selection of third party software in the <a href="https://aur.archlinux.org/" target="_blank" title="the arch user repository">AUR</a> (The Arch User Repository).</p>
+					<p class="ind">My first 3 attempts at Arch Linux were learning experiences, but I have gotten good enough to use it as an everyday operating system. What I love about Arch is you can make it into whatever you want. Also Arch is a rolling-release distro, so unlike Debian, I don't have to start over every 4 years. Also, Arch Linux has some of the newest software out there, and great tools for building and installing from it's massive selection of third party software in the <a href="https://aur.archlinux.org/" target="_blank" title="the arch user repository">AUR</a> (The Arch User Repository).</p>
 				</span>
 			</td><td class="nybox" id="col3row2"  onclick="focusbox(3,2)"> <!-- Replace this with favorite anime series instead for the glory of lain-chan :))) -->
 				<span id="col3row2sm" style="display:none">
-					<h2>PHP</h2>
+					<h2>YodaScript</h2>
 				</span><span id="col3row2md">
-					<h2>Favorite Language</h2><hr/>
-					<h4><a href="//dvtate.com/prog/php/">PHP</a></h4>
+					<h2>My Scripting Language</h2><hr/>
+					<h4><a href="https://github.com/dvtate/yoda">YodaScript</a></h4>
 				</span><span class="lgfull" id="col3row2lg" onclick="resetboxes()">
-					<h2><b><a href="//dvtate.com/prog/php/">PHP</a></b></h2>
+					<h2><b><a href="https://github.com/dvtate/yoda">YodaScript</a></b></h2>
 					<table id="sprog"><tr>
 						<td><a href="http://www.php.net/"><img src="http://php.net/images/logo.php"/><br/><img src="http://php.net//images/logos/php5-power-micro.png"/></a></td>
 						<td id="lang-om">
-							<p class="ind"><a href="//dvtate.com/prog/php/">PHP</a> is a server-side scripting language. It is commonly mixed with HTML in many web pages which process information, (ie- login, shopping, blogs, etc.). My interest in PHP was re-sparked on my most recent project, my <a href="//dvtate.com/chat/">chatroom</a>. Where I got back into PHP.</p>
+							<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based language which interprets program files on the fly and doesn't utilize a preprocessor. In it's current state (2017-7-19), YodaScript isn't quite stable enough for most applications, but it continues to improve, and will soon be ready for the production environment.</p>
 						</td></tr>
 					</table>
 				</span>
