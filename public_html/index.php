@@ -179,15 +179,10 @@
 					<h2>YodaScript</h2>
 				</span><span id="col3row2md">
 					<h2>My Scripting Language</h2><hr/>
-					<h4><a href="https://github.com/dvtate/yoda">YodaScript</a></h4>
+					<h4><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></h4>
 				</span><span class="lgfull" id="col3row2lg" onclick="resetboxes()">
-					<h2><b><a href="https://github.com/dvtate/yoda">YodaScript</a></b></h2>
-					<table id="sprog"><tr>
-						<td><a href="http://www.php.net/"><img src="http://php.net/images/logo.php"/><br/><img src="http://php.net//images/logos/php5-power-micro.png"/></a></td>
-						<td id="lang-om">
-							<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based language which interprets program files on the fly and doesn't utilize a preprocessor. In it's current state (2017-7-19), YodaScript isn't quite stable enough for most applications, but it continues to improve, and will soon be ready for the production environment.</p>
-						</td></tr>
-					</table>
+					<h2><b><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></b></h2>
+					<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based language which interprets program files on the fly and doesn't utilize a preprocessor. In it's current state (2017-7-19), YodaScript isn't quite stable enough for most applications, but it continues to improve, and will soon be ready for the production environment.</p>
 				</span>
 			</td>
 		</tr></table>
