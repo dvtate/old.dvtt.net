@@ -79,14 +79,15 @@
 		<script>genNavBar("navbar");</script>
 		<table class="row"><tr>
 			<td class="nybox" id="col1row1" onclick="focusbox(1,1)">
-				<span id="col1row1sm" style="display: none" title="see how busy I've been and what has changed since last time">
+				<span id="col1row1sm" style="display: none" title="double-click to see how busy I've been and what has changed since last time">
 					<h2>Updates</h2>
 				</span><span id="col1row1md" title="see how busy I've been and what has changed since last time">
 					<h2>Updates</h2><hr/><h3>See what I'm doing with my <span title="or lack thereof">time</span></h3>
 				</span><span class="lgfull" id="col1row1lg" onclick="resetboxes()">
-					<h2 title="see how busy I've been and what has changed since last time"><b>Updates</b></h2>
+					<h2 title="double-click to see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
-						<li><b>2017.6.23</b>: began developing a <a href="https://github.com/robobibb/robobibb-steve-bot/" target="_blank">Telegram bot</a> (node.js) for my robotics team</b>
+						<li><b>2017.8.7</b>: began learing Chinese on GA Virtual School so I can communicate with internet friends.</li>
+						<li><b>2017.6.23</b>: began developing a <a href="https://github.com/robobibb/robobibb-steve-bot/" target="_blank">Telegram bot</a> (node.js) for my robotics team</li>
 						<li><b>2017.6.11</b>: registered cloudflare account, <a href="https://dvtate.com">https</a> enabled.</li>
 						<li><b>2017.6.5</b>: hosting provider changed service, minor changes</li>
 						<li><b>2017.3.8</b>: started working on <a href="https://robobibb.github.io" target="_blank">robotics team's website</a> with my programming team.</li>
@@ -99,12 +100,12 @@
 						<li><b>2016.4.4</b>: parents threw server out of window because they didn't like my GF... (qwq)</li>
 						<li><b>2016.2.14</b>: parents decieded I should take a break from the computer.</li>
 						<li><b>2016.2.13</b>: Went public with my relationship to my GF.</li>
-						<li><b>2016.1.1</b>: Got addiceted to low-level languages (C/C++) and put the website on the back-burner.</li>
+						<li><b>2016.1.1</b>: Got addiceted to C/C++/Arduino and put the website on the back-burner.</li>
 						<li><b>2015.12.4</b>: Moved website to my girlfriend's server.</li>
 						<li><b>2015.11.20</b>: 16<sup>th</sup> birthday.</li>
 						<li><b>2015.9.2</b>: Started work on a <a href="//dvtate.com/healthit/">project for HealthIT</a>.</li>
 						<li><b>2015.8.5</b>: Rebuilt homepage with new style (<a href="//dvtate.com/trusty.html">view old</a>).</li>
-						<li><b>2015.8.3</b>: Back to school.</li>
+						<li><b>2015.8.3</b>: Began learning Spanish at school.</li>
 						<li><b>2015.7.27</b>: Built the <a href="//dvtate.com/os/">operating systems</a> page.</li>
 						<li><b>2015.6.11</b>: Built <a href="//dvtate.com/3d/">3D modeling</a> page.</li>
 						<li><b>2015.6.5</b>: Added a <a href="//dvtate.com/school/">college</a> page. But there's a trick :)</li>
@@ -126,9 +127,12 @@
 						<li><b>2014.8.27</b>: Built original homepage.</li>
 						<li><b>2014.7.1</b>: Started playing with C# (within <a href="http://www.unity3d.com/" target="_blank">Unity</a>)</li>
 						<li><b>2014.6.30</b>: converted tri.asp to <a href="//dvtate.com/prog/php/oldtri.php">oldtri.php</a></li>
+						<li><b>2013.1</b>: built first forge</li>
+						<li><b>2012.11</b>: began learning YA-BASIC as first programming language.</li>
+						<li><b>2010</b>: began learning Danish online in freetime.</li>
 					</ul>
 				</span>
-			</td><td class="nybox" id="col2row1" onclick="focusbox(2,1)" title="See what's happening in the ChatRoom">
+			</td><td class="nybox" id="col2row1" onclick="focusbox(2,1)" title="double-click to See what's happening in the ChatRoom">
 				<span id="col2row1sm" style="display: none">
 					<h1>Chat<sup><span id="bubblealert"><?php echo getpostcount(); ?></span></sup></h1>
 				</span><span id="col2row1md">
@@ -139,7 +143,7 @@
 					<?php echo getlatestpost(); ?><br/><hr/>
 					<h3 style="display:inline"><a href="//dvtate.com/chat/">join the conversation</a></h3>
 				</span>
-			</td><td class="nybox" id="col3row1"  onclick="focusbox(3,1)" title="Recently added page">
+			</td><td class="nybox" id="col3row1"  onclick="focusbox(3,1)" title="Recently added page (double click box)">
 				<span id="col3row1sm" style="display:none">
 					<h2>OS's</h2>
 				</span><span id="col3row1md">
@@ -154,7 +158,7 @@
 		</tr></table>
 		<!--row#2-->
 		<table class="row"><tr>
-			<td class="nybox" id="col1row2"  onclick="focusbox(1,2)" title="Ever wonder how or why I made my website?">
+			<td class="nybox" id="col1row2"  onclick="focusbox(1,2)" title="Ever wonder how or why I made my website? (double-click)">
 				<span id="col1row2sm" style="display:none">
 					<h2>About This Site</h2>
 				</span><span id="col1row2md">
@@ -164,7 +168,7 @@
 					<h2><b>About this Website</b></h2>
 					<p class="ind">In the spring of 2014, I created a program in VBScript which finds the area between any 3 coordinates. Most of the kids in my math class wanted a copy of it. I attempted to send it via email, but Gmail wouldn't let me send it. So I converted it to ASP, ASP.NET, and finally PHP (I had never heard of JavaScript). This was my first addition to this website. You can still visit it <a  href="http://www.dvtate.com/prog/php/tri.php" >here</a> (or <a href="http://www.dvtate.com/prog/php/oldtri.php">here</a> for the original prototype). I continued to add more pages for all of my hobbies. I ended up geting a free domain for my website, and have continued adding pages.</p>
 				</span>
-			</td><td class="nybox" id="col2row2"  onclick="focusbox(2,2)" title="My primary operating system">
+			</td><td class="nybox" id="col2row2"  onclick="focusbox(2,2)" title="My primary operating system (double-click)">
 				<span id="col2row2sm" style="display:none">
 					<h2>Linux</h2>
 				</span><span id="col2row2md">
@@ -174,12 +178,12 @@
 					<img src="//dvtate.com/os/logos/arch.png" width="75%" id="archlinuxlogo" alt="arch linux logo"/>
 					<p class="ind">My first 3 attempts at Arch Linux were learning experiences, but I have gotten good enough to use it as an everyday operating system. What I love about Arch is you can make it into whatever you want. Also Arch is a rolling-release distro, so unlike Debian, I don't have to start over every 4 years. Also, Arch Linux has some of the newest software out there, and great tools for building and installing from it's massive selection of third party software in the <a href="https://aur.archlinux.org/" target="_blank" title="the arch user repository">AUR</a> (The Arch User Repository).</p>
 				</span>
-			</td><td class="nybox" id="col3row2"  onclick="focusbox(3,2)"> <!-- Replace this with favorite anime series instead for the glory of lain-chan :))) -->
+			</td><td class="nybox" id="col3row2"  onclick="focusbox(3,2)" title="double-click to read about my scripting language"> <!-- Replace this with favorite anime series instead for the glory of lain-chan :))) -->
 				<span id="col3row2sm" style="display:none">
-					<h2>YodaScript</h2>
+					<h2><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></h2>
 				</span><span id="col3row2md">
 					<h2>My Scripting Language</h2><hr/>
-					<h4><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></h4>
+					<h4>Double-click to read more.</h4>
 				</span><span class="lgfull" id="col3row2lg" onclick="resetboxes()">
 					<h2><b><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></b></h2>
 					<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based language which interprets program files on the fly and doesn't utilize a preprocessor. In it's current state (2017-7-19), YodaScript isn't quite stable enough for most applications, but it continues to improve, and will soon be ready for the production environment.</p>
