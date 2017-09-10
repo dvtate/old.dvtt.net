@@ -3,7 +3,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="description" content="DV Tate's personal website homepage. I have a chatroom, calculators, operating systems, and several other pages (mostly about me)."/>
 		<meta name="author" content="Dustin Van Tate Testa"/><title>Home - Tate's Website</title>
-		<meta name="keywords" content="tate testa dustin van freshman blacksmith fish forge programming linux  Dustin Van Tate Testa math calculators"/>
+		<meta name="keywords" content="tate testa dustin van freshman blacksmith fish forge programming linux Dustin Van Tate Testa math calculators"/>
 		<meta name="start-date" id="new-style" content="8-5-2015"/><meta name="edit-date" content="5-13-2015"/>
 		<meta property="og:image" content="//dvtate.com/chat/guest.png" />
 		<link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
@@ -86,7 +86,10 @@
 				</span><span class="lgfull" id="col1row1lg" onclick="resetboxes()">
 					<h2 title="double-click to see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
+						<li><b>2017.9.5</b>: convert pi server into a shadowsocks server so that my robotics team and I can use the real internet at school.</li>
+						<li><b>2017.8.25</b>: School blocks expressvpn, which I was paying $200/year for (2 subs, shared acct.)</li>
 						<li><b>2017.8.7</b>: began learing Chinese on GA Virtual School so I can communicate with internet friends.</li>
+						<li><b>2017.7.6</b>: made a raspberry pi home server running Arch Linux ARM. (for robotics chat bot, discord bot, and shadowsocks server)</li>
 						<li><b>2017.6.23</b>: began developing a <a href="https://github.com/robobibb/robobibb-steve-bot/" target="_blank">Telegram bot</a> (node.js) for my robotics team</li>
 						<li><b>2017.6.11</b>: registered cloudflare account, <a href="https://dvtate.com">https</a> enabled.</li>
 						<li><b>2017.6.5</b>: hosting provider changed service, minor changes</li>
@@ -96,11 +99,11 @@
 						<li><b>2016.8.15</b>: realized that <a href="https://plus.google.com/+Tatetesta/posts/AYFf3A2wsbC" target="_blank">my school district was blocking my website</a>... those bastards.</li>
 						<li><b>2016.8.1</b>: School starts. 5 AP Classes. This is gonna be difficult.</li>
 						<li><b>2016.6.19</b>: went to GHP for software (and electrical) engineering.</li>
-						<li><b>2016.6.5</b>: began developing my own scripting language - <a href="https://github.com/dvtate/yoda/" target="_blank">YodaScript</a>.</li>
-						<li><b>2016.4.4</b>: parents threw server out of window because they didn't like my GF... (qwq)</li>
+						<li><b>2016.6.5</b>: began developing my own scripting language - <a href="https://github.com/dvtate/yoda/" target="_blank">YodaScript</a>, while volunteering at a summer camp.</li>
+						<li><b>2016.4.4</b>: parents threw my workstation out of window because they didn't like my GF... (qwq)</li>
 						<li><b>2016.2.14</b>: parents decieded I should take a break from the computer.</li>
 						<li><b>2016.2.13</b>: Went public with my relationship to my GF.</li>
-						<li><b>2016.1.1</b>: Got addiceted to C/C++/Arduino and put the website on the back-burner.</li>
+						<li><b>2016.1.1</b>: Got addicted to C/C++/Arduino and put the website on the back-burner.</li>
 						<li><b>2015.12.4</b>: Moved website to my girlfriend's server.</li>
 						<li><b>2015.11.20</b>: 16<sup>th</sup> birthday.</li>
 						<li><b>2015.9.2</b>: Started work on a <a href="//dvtate.com/healthit/">project for HealthIT</a>.</li>
@@ -116,7 +119,7 @@
 						<li><b>2015.4.20</b>: registered new domain (<a href="//dvtate.com/">dvtate.com</a>) to replace <a class="broken-link" href="//dvtate.com/pageremoved.html" title="I no longer own this url (broken-link)">dvtate.hostoi.com</a></li>
 						<li><b>2015.4.12</b>: Finished <a href="http://dvtate.com/chat/">chatroom</a>.</li>
 						<li><b>2015.4.6</b>: Began Work on <a href="//dvtate.com/chat/">chatroom</a>, Favorite language changed to <a href="http://www.dvtate.com/prog/php/">PHP</a></li>
-						<li><b>2015.2.16</b>: Installed <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> (the hard way) for the first time.</li>
+						<li><b>2015.2.16</b>: Installed <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a> for the first time.</li>
 						<li><b>2015.2.13</b>: Adjustments to page menu, fonts, style, drop-down menus, etc.(<a href="http://dvtate.com/draft.html">view old</a>)</li>
 						<li><b>2015.2.2</b>: Rebuilt website homepage from scratch (<a href="//dvtate.com/olddefault.html">view old</a>).</li>
 						<li><b>2015.1.20</b>: Made a summations calculator, and a resistor color code calculator.</li>
@@ -129,6 +132,9 @@
 						<li><b>2014.6.30</b>: converted tri.asp to <a href="//dvtate.com/prog/php/oldtri.php">oldtri.php</a></li>
 						<li><b>2013.1</b>: built first forge</li>
 						<li><b>2012.11</b>: began learning YA-BASIC as first programming language.</li>
+						<li><b>2012.10</b>: made earthquake machine 3000</li>
+						<li><b>2012.4</b>: first arduino (uno)</li>
+						<li><b>2011.10</b>: made earthquake machine 2000</li>
 						<li><b>2010</b>: began learning Danish online in freetime.</li>
 					</ul>
 				</span>
