@@ -1,3 +1,5 @@
+
+<div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: Rando Calrisian <br/> <b>Date</b>: Sunday, October 15, 2017</td></tr></table><div class="msg"><object>Vivos brunneis vulpes salit super piger canis.</object></div></div><br/>
 <div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/admin.jpg"  height="80px" alt="profile picture" title="SysAdmin: Can edit and/or delete your posts."/></td><td id="info"><b>Name</b>: Tate <br/> <b>Date</b>: Monday, February 13, 2017</td></tr></table><div class="msg"><object>Good show, I&#39;m already subbed ;)</object></div></div><br/>
 
 <div id="post"><table id="iconname"><tr><td><img id="ico" src="//dvtate.com/chat/guest.png" height="80px" alt="profile picture" title="Guest" /></td><td id="info"><b>Name</b>: Owen Hester <br/> <b>Date</b>: Tuesday, January 17, 2017</td></tr></table><div class="msg"><object>RIP this chat lol
