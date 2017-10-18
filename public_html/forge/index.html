@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head><!--last touched: 2017-8-21-->
@@ -13,7 +14,24 @@
 		
 		<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="//dvtate.com/styles/nyental.css"/>
-		<style type="text/css"> html { min-width:666px; } </style>
+		<style type="text/css">
+
+			html { min-width:666px; } 
+			div.video-wrapper {
+				position: relative;
+				padding-bottom: 56.25%; /*16:9*/
+				padding-top: 25px;
+				height: 0;
+			}
+			div.video-wrapper iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+		</style>
 		
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
 		<script src="//dvtate.com/scripts/main.js" type="text/javascript"></script>
@@ -23,10 +41,12 @@
 		<script>genNavBar("navbar");</script>
 		
 		<div class="main"><h3>The forge</h3>
-				<p class="ind" id="nbr">I made my first forge in the 7<sup><u>th</u></sup> grade. It was a flower-pot forge which ran on charcoal (which I made at home). I used it only once. I eventually switched to coal, and built a new forge (the one in the video). This worked great for me. I made jewellery which I sold to make some money. I am in the process of switching to propane, once I create my forge, I will start making jewellery again. Thanks for the support!</p>
+				<p class="ind" id="nbr">I made my first forge in the 7<sup><u>th</u></sup> grade. It was a flower-pot forge which ran on charcoal (also homemade). After using this forge once, I built quite a few others, eventually arriving at the one seen in the video. I made a good bit of money selling jewelry I made with the forge. And the work I did got me <a href="http://www.macon.com/living/article30136959.html" target="_blank">featured in the local newspaper</a>. Eventually my parents had to sell the lot, and although I had plans to build a propane fuelled forge for the backyard, safety concerns and a lack of time in high school held me back. </p>
 				<br/>
-				<a href="http://www.macon.com/living/article30136959.html" target="_blank">This got me in the local newspaper</a>
-				<iframe width="560" height="315" id="film" src="https://www.youtube.com/embed/bWUPJ6ItJqc?rel=0" frameborder="0" allowfullscreen></iframe>
+				<center><div class="video-wrapper">
+					<iframe width="560" height="315" frameborder="0" allowfullscreen
+						src="https://www.youtube.com/embed/bWUPJ6ItJqc?rel=0"></iframe>
+				</div></center>
 		</div>
 		
 		<center><span id="social_footer"></span></center>
