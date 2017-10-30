@@ -192,7 +192,7 @@
 					<h4>Double-click to read more.</h4>
 				</span><span class="lgfull" id="col3row2lg" onclick="resetboxes()">
 					<h2><b><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></b></h2>
-					<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based language which interprets program files on the fly and doesn't utilize a preprocessor. In it's current state (2017-7-19), YodaScript isn't quite stable enough for most applications, but it continues to improve, and will soon be ready for the production environment.</p>
+					<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based, and turing-complete language which interprets program files on the fly and doesn't utilize a preprocessor or AST. It supports a variety of programming paradigms with more coming. I will continue to add more features to the langauge in my freetime and hope it will eventually become something valuable.</p>
 				</span>
 			</td>
 		</tr></table>
