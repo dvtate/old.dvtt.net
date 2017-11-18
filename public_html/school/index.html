@@ -21,8 +21,10 @@
 		<ul id="nav"></ul><script>genNavBar("nav");</script>
 		<div class="main">
 			<h1><b>I'm Thinking About</b>:</h1><ul>
-				<table id="skole_choice"><tr><td id="skole_logo"></td><td><p class="ind" id="om_skole">Waiting for your location</p></td></tr></table>
-			</ul><div id="how_container"><div id="showhide" onclick="showhidehow()"><h3>How I chose <a id="showhide_txt"></a></h3></div>
+				<table id="skole_choice"><tr><td id="skole_logo"></td><td><p class="ind" id="om_skole">Waiting for your location...</p></td></tr></table>
+			</ul>
+			<div id="how_container">
+				<div id="showhide" onclick="showhidehow()"><h3>How I chose <a id="showhide_txt"></a></h3></div>
 				<div id="how"><hr/>
 					<p class="ind">This page doesn't give a uniform result about which college I want to attend.
 						This page first gets your location, and picks a college I've chosen for your location.
@@ -31,19 +33,24 @@
 						you should see Auburn, if you are near the west coast, you should see CalTech. If you are
 						anywhere else, Georgia tech should appear. Because Google's geolocation API isn't perfect
 						the map below will show you where my page thinks you are and not your exact location.
-					</p><h4><b>Colleges I want to go to (2017):</b></h4><ol>
-						<li>CalTech: although I likely can't afford out of state tuitition, I do like this school.</li>
+					</p>
+					<h4><b>Colleges I want to go to (2017):</b></h4><ol>
 						<li>GaTech: If I can get into this school, it's probably my best option.</li>
+						<li>IIT: It's a good science and engineering School in Chicago seems nice.</li>
+						<li>University of Minnesota: it has such a massive selection of courses, definitely a quality education.</li>
 						<li>DTU: I've always wanted to go to Denmark (Danish is my second language), and going to school there would be a dream.</li>
-						<li>MiT: MiT is definitely one of the most prestigious universities, but I've been told it's not for me.</li>
 						<li>SPSU/KSU: Although their campus is almost entirely male, they have good programs for what I'm interested in.</li>
+						<li>MIT, CalTech: LOL like I could actually get into either of these schools</li>
 					</ol>
 					<div id="google_canvas"></div><!--becomes the map-->
 					<h4><b>Override Location</b>:<input type="button" value="CalTech" onclick="caltech()" /><input type="button" value="dtu" onclick="dtu()" /><input type="button" value="mit" onclick="mit()" />
-					<input type="button" value="auburn" onclick="auburn()" /><input type="button" value="gatech" onclick="gatech()" /></h4>
+					<input type="button" value="auburn" onclick="auburn()" /><input type="button" value="gatech" onclick="gatech()" /><input type="button" value="iit" onclick="iit()" /></h4>
+
 				</div>
 			</div>
-		</div><center>
+		</div>
+
+		<center>
 				  <div id="social_footer"></div>
 				  <script>genFooter("social_footer");</script>
 		</center>
@@ -127,7 +134,7 @@
 					alert("ERROR:\n Geolocation is not supported by this browser");
 			};
 
-			function showhidehow(){
+			(function showhidehow(){
 				if(open){
 					document.getElementById('how').style.display="block";
 					document.getElementById('showhide_txt').innerHTML="[hide]";
@@ -137,9 +144,7 @@
 					document.getElementById('showhide_txt').innerHTML="[show]";
 				}
 				open=!open;
-			}
-
-			showhidehow();//-->
+			})();//-->
 		</script>
 	</body>
 </html>
