@@ -47,65 +47,96 @@
 				  <div id="social_footer"></div>
 				  <script>genFooter("social_footer");</script>
 		</center>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB399zCwcT55OngluAXUFRZZ-uZXX-Jj7k&callback=initMap" async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCpXeX_HczEih3pZmqdptEWUS_XxOjshO4&callback=getLocation" async defer></script>
 		<script type="text/javascript"><!--//geolocation script.
-			var lat,lon,open=false;
-			function gatech(){document.getElementById('om_skole').innerHTML=
+			var lat, lon, open = false;
+
+
+			function gatech(){
+				document.getElementById("om_skole").innerHTML=
 				"Located in Atlanta, Georgia, the Georgia Institute of Technology is a leading research university committed to improving the human condition through advanced science and technology.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"//gatech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/gt.png\" alt=\"logo\"/></a>";
-			}function mit(){document.getElementById('om_skole').innerHTML=
+				document.getElementById("skole_logo").innerHTML="<a href=\"//gatech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/gt.png\" alt=\"logo\"/></a>";
+			}
+			function mit(){
+				document.getElementById("om_skole").innerHTML=
 				"The Massachusetts Institute of Technology (MIT) is a private research university in Cambridge, Massachusetts. One of the most prestigious universities in the field of engineering.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"//mit.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/mit.png\" alt=\"logo\"/></a>";
-			}function dtu(){document.getElementById('om_skole').innerHTML=
+				document.getElementById("skole_logo").innerHTML="<a href=\"//mit.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/mit.png\" alt=\"logo\"/></a>";
+			}
+			function dtu(){
+				document.getElementById("om_skole").innerHTML=
 				"For almost two centuries DTU, Technical University of Denmark, has been dedicated to fulfilling the vision of H.C. &#216;rsted - the father of electromagnetism - who founded the university in 1829 to develop and create value using the natural sciences and the technical sciences to benefit society.</p><p class=\"ind\">Today, DTU is ranked as one of the foremost technical universities in Europe, continues to set new records in the number of publications, and persistently increase and develop our partnerships with industry, and assignments accomplished by DTU\'s public sector consultancy.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"//www.dtu.dk/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/dtu.jpg\" alt=\"logo\"/></a>";
-			}function auburn(){document.getElementById('om_skole').innerHTML=
+				document.getElementById("skole_logo").innerHTML="<a href=\"//www.dtu.dk/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/dtu.jpg\" alt=\"logo\"/></a>";
+			}
+			function auburn(){
+				document.getElementById("om_skole").innerHTML=
 				"Auburn University has developed into one of the largest universities in the South, remaining in the educational forefront with its traditional blend of arts and applied science, and changing with the needs of today while living with a respect for the traditions and spirit that are Auburn. (My stepfather went here)";
-				document.getElementById('skole_logo').innerHTML="<a href=\"//auburn.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/au.jpg\" alt=\"logo\"/></a>";
-			}function caltech(){document.getElementById('om_skole').innerHTML=
+				document.getElementById("skole_logo").innerHTML="<a href=\"//auburn.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/au.jpg\" alt=\"logo\"/></a>";
+			}
+			function caltech(){
+				document.getElementById("om_skole").innerHTML=
 				"Caltech is a world-renowned and pioneering research and education institution dedicated to advancing science and engineering.";
-				document.getElementById('skole_logo').innerHTML="<a href=\"//caltech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/cali.png\" alt=\"logo\"/></a>";
+				document.getElementById("skole_logo").innerHTML="<a href=\"//caltech.edu/\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/school/logos/cali.png\" alt=\"logo\"/></a>";
+			}
+			function iit(){
+				document.getElementById("om_skole").innerHTML=
+				"Illinois Institute of Technology, commonly called Illinois Tech or IIT, is a private Ph.D.-granting research university located in Chicago, in the U.S. state of Illinois, with programs in engineering, science, psychology, architecture, business, communications, industrial technology, information technology, design and law.";
+				document.getElementById("skole_logo").innerHTML="<a href=\"//iit.edu\" target=\"_blank\"><img id=\"logo_img\" src=\"//dvtate.com/logos/iit.svg\" alt=\"logo\"/></a>";
 			}
 			function redrawmap(){
-				if(!!navigator.geolocation){var map;
-					var mapOptions={zoom:15, mapTypeId:google.maps.MapTypeId.ROADMAP};
-					map=new google.maps.Map(document.getElementById('google_canvas'),mapOptions);
-					var geolocate=new google.maps.LatLng(lat,lon);
-					if(typeof(lat)==="undefined"||typeof(lon)==="undefined"){//location not given
-						var infowindow=new google.maps.InfoWindow({
-							map:map,position:geolocate,content:"<h1>Why won\'t you share your location</h1>"+
-							"<h2>Thats not very nice</h2><h2>ERROR: no location given</h2>"
-						});map.setCenter(geolocate);
-					}else{
-						var infowindow=new google.maps.InfoWindow({
-							map:map,position:geolocate,content:"<h1>I think you\'re here</h1><h2>Latitude: "+
-							lat+"</h2><h2>Longitude: "+lon+"</h2>"
-						});map.setCenter(geolocate);
+				if (!!navigator.geolocation) {
+					var mapOptions = {zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP};
+					var map = new google.maps.Map(document.getElementById("google_canvas"), mapOptions);
+					var geolocate = new google.maps.LatLng(lat, lon);
+					if (typeof(lat) === "undefined" || typeof(lon) === "undefined") {//location not given
+						var infowindow = new google.maps.InfoWindow({
+							map: map,
+							position: geolocate,
+							content: "<h1>Why won\'t you share your location</h1>"+
+								"<h2>If you don't trust google then stay hidden</h2><h2>ERROR: no location given</h2>"
+						});
+						map.setCenter(geolocate);
+					} else {
+						var infowindow = new google.maps.InfoWindow({
+							map: map,
+							position: geolocate,
+							content: "<h1>I think you\'re here</h1><h2>Latitude: "+
+								lat+"</h2><h2>Longitude: "+lon+"</h2>"
+						});
+						map.setCenter(geolocate);
 					}
-				}else{alert("\tERROR!\nThis browser doesn't support geolocation.\nYou should get a better one.");
+				}else{
+					alert("\tERROR!\nThis browser doesn't support geolocation.\nYou should get a better one.");
 					document.getElementById('google_canvas').innerHTML='ERROR: Couldn\'t get location';
 				}
 			}
 			function pickcollege(position){
-				lat=position.coords.latitude;lon=position.coords.longitude;
-				if(lat>38&&lat<48&&lon<-66&&lon>-84)mit();//NE-US
-				else if(lat<72&&lat>32&&lon>-24&&lon<30)dtu();//Europe
-				else if(lat<48&&lat>30&&lon>-132&&lon<-114)caltech();//west coast -US
-				else if(lat<38&&lat>28&&lon>-95&&lon<-85)auburn();//gulf coast -US
-				else if(typeof(lat)=="number"&&typeof(lon)=="number")gatech();//any other real coordinates
-				else getLocation();//undefined(no location)
+				lat = position.coords.latitude;
+				lon = position.coords.longitude;
+				if (lat > 38 && lat < 48 && lon < -66 && lon > -84) mit();				//NE-US
+				else if (lat < 72 && lat > 32 && lon > -24 && lon < 30) dtu();			//Europe
+				else if (lat < 48 && lat > 30 && lon > -132 && lon < -114) caltech();	// west coast-US
+				else if (lat < 38 && lat > 28 && lon > -95 && lon < -85) auburn();		// gulf coast-US
+				else if (lat > 38 && lat < 48 && lon < -66 && lon > -84) iit();			// mid-west-US
+				else if (typeof(lat) == "number" && typeof(lon) == "number")gatech();			//any other real coordinates
+				else getLocation(); // undefined(no location)
 			}
-			(function getLocation(){
-				if(!!navigator.geolocation)navigator.geolocation.getCurrentPosition(pickcollege);
-				else alert("ERROR:\n Geolocation is not supported by this browser");
-			})();
-			
+			function getLocation(){
+				if(!!navigator.geolocation)
+					navigator.geolocation.getCurrentPosition(pickcollege);
+				else
+					alert("ERROR:\n Geolocation is not supported by this browser");
+			};
+
 			function showhidehow(){
-				if(open){document.getElementById('how').style.display="block";
-					document.getElementById('showhide_txt').innerHTML="[hide]";redrawmap();
-				}else{document.getElementById('how').style.display="none";
+				if(open){
+					document.getElementById('how').style.display="block";
+					document.getElementById('showhide_txt').innerHTML="[hide]";
+					redrawmap();
+				} else {
+					document.getElementById('how').style.display="none";
 					document.getElementById('showhide_txt').innerHTML="[show]";
-				}open=!open;
+				}
+				open=!open;
 			}
 
 			showhidehow();//-->

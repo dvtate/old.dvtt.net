@@ -26,7 +26,7 @@
 		return $output;
 
 	}
-	$latlon=explode(",",cURLgetSrc("ipinfo.io/".getClientIP()."/loc"));
+	$latlon=getClientIP();//explode(",",cURLgetSrc("ipinfo.io/".getClientIP()."/loc"));
 ?><!DOCTYPE html>
 <html>
 	<head>
