@@ -3,132 +3,292 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="description" content="DV Tate's Web-Calculator Collection"/>
-		<meta name="author" content="Dustin Van Tate Testa"/><title>Calculators - Tate's Website</title>
+		<meta name="author" content="Dustin Van Tate Testa"/>
+		<title>Calculators - Tate's Website</title>
 		<meta name="keywords" content="tate testa dustin van freshman fish forge programming Dustin Van Tate Testa DV"/>
-		<meta name="start-date" content="2-2-2015"/><meta name="edit-date" content="4-24-2015"/>
+		<meta name="start-date" content="2-2-2015"/>
+
 		<link rel="stylesheet" type="text/css" href="//dvtate.com/styles/nyental.css"/>
 		<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1-->
-		<style type="text/css">#triarea{background-color:blue;color:white;background-color:blue;}
-			h3.ans{font-style:bold;color:#FFF;background-color:#98bf21;padding:4px;}span#seg{text-decoration:overline;}
-			table.bdr, th.bdr, td.bdr{border:1px solid black;}span#hidden{display:none;}.coordinate{height:20px;}
-			.pagenavn{margin-left:5%;margin-right:5%;padding-left:10px;background-color:blue;color:white;}
-			.alert{margin-left:5%;margin-right:5%;padding:5px;border-radius:10px;margin-top:1pc;background-color:#FF0;}.bad{background-color:red;}
-		</style><script src="https://dvtate.com/scripts/main.js"></script>
+		<style type="text/css">
+			#triarea {
+				background-color: blue;
+				color: white;
+				background-color: blue;
+			}
+			h3.ans {
+				font-style: bold;
+				color: #FFF;
+				background-color: #98bf21;
+				padding: 4px;
+			}
+			span#seg { text-decoration: overline; }
+			table.bdr, th.bdr, td.bdr {
+				border:1px solid black;
+			}
+			span#hidden { display: none; }
+			.coordinate { height: 20px; }
+			.pagenavn {
+				margin-left: 5%;
+				margin-right: 5%;
+				padding-left: 10px;
+				background-color: blue;
+				color: white;
+			}
+			.alert {
+				margin-left: 5%;
+				margin-right: 5%;
+				padding: 5px;
+				border-radius: 10px;
+				margin-top: 1pc;
+				background-color: #FF0;
+			}
+			.bad { background-color: red; }
+		</style>
+		<script src="https://dvtate.com/scripts/main.js"></script>
 		<script type="text/javascript" id="math-functions"><!--//math functions to make more user friendly
-			var pi=3.141592653589793;function pi(){return 3.141592653589793;}
-			function pow(base,exp){return Math.pow(base,exp);}function xrt(root,base){return Math.pow(base,(1/root));}
-			function sqrt(base){return Math.pow(base,0.5);}function Sqrt(base){return Math.pow(base,0.5);}
-			function sqr(base){return Math.pow(base,0.5);}function Sqr(base){return Math.pow(base,0.5);}
-			function abs(exp){return Math.abs(eval(exp));}function Abs(exp){return Math.abs(eval(exp));}//-->
-		</script><style type="text/css" id="sumstyle">#summ{color:white;background-color:blue;}
-			#cap-sigma{font-family:sans-serif;font-size:120px;padding:0;margin:0;}
-			#lort{background-color:white;color:black;border:1px solid red;border-radius:5px;padding:0px;margin:0px;}
+
+			const pi = 3.141592653589793; // close enough
+			function pi(){ return pi; }
+
+			function pow(base, exp){ return Math.pow(base, exp); }
+			function xrt(root, base){ return Math.pow(base, (1 / root)); }
+
+			function Sqrt(base){ return Math.pow(base, 0.5); }
+			function sqrt(base){ return Sqrt(base); }
+			function sqr(base){ return Sqrt(base); }
+			function Sqr(base){ return Sqrt(base); }
+
+			function abs(val){ return Math.abs(val); }
+			function Abs(val){ return abs(val); }
+
+			//-->
+		</script>
+		<style type="text/css" id="sumstyle">
+			#summ {
+				color: white;
+				background-color: blue;
+			}
+			#cap-sigma {
+				font-family: sans-serif, serif;
+				font-size: 120px;
+				padding: 0; margin: 0;
+			}
+			#lort {
+				background-color: white;
+				color: black;
+				border: 1px solid red;
+				border-radius: 5px;
+				padding: 0px; margin: 0px;
+			}
 		</style><script type="text/javascript" id="sums.js"><!--//By: Dustin Van Tate Testa
-			function summate(){var sum=0;
-				try{var stop=eval("("+document.forms['sum']['top'].value+")");
-					var x=eval("("+document.forms['sum']['start'].value+")");
-				}catch(err){document.getElementById("summ").style.backgroundColor="red";
-					document.getElementById("summ").innerHTML = "<h3 id=\"lort\">Syntax Error(NAN)</h3>";return;
-				}var prc = document.forms['sum']['process'].value;
-				try{document.getElementById("summ").style.backgroundColor="green";
-					while(x<=stop){sum+=eval("("+prc+")");x++;}
-				}catch(err){document.getElementById("summ").style.backgroundColor="red";
-					document.getElementById("summ").innerHTML="<h3 id=\"lort\">Syntax Error(NAN)</h3>";return;
-				}document.getElementById("summ").style.backgroundColor="green";
-				while(x<=stop){sum+=eval("("+prc+")");x++;}document.getElementById("summ").innerHTML="sum = "+sum;
+			function summate(){
+				var sum = 0;
+				try {
+					var stop = eval("(" + document.forms['sum']['top'].value + ")");
+					var x = eval("(" + document.forms['sum']['start'].value + ")");
+				} catch (err) {
+					document.getElementById("summ").style.backgroundColor = "red";
+					document.getElementById("summ").innerHTML = "<h3 id=\"lort\">Syntax Error(NAN)</h3>";
+					return;
+				}
+
+				var prc = document.forms['sum']['process'].value;
+				try{
+					document.getElementById("summ").style.backgroundColor = "green";
+					while (x <= stop) {
+						sum += eval("(" + prc + ")");
+						x++;
+					}
+				} catch (err) {
+					document.getElementById("summ").style.backgroundColor = "red";
+					document.getElementById("summ").innerHTML = "<h3 id=\"lort\">Syntax Error(NAN)</h3>";
+					return;
+				}
+				document.getElementById("summ").style.backgroundColor = "green";
+				while (x <= stop) {
+					sum += eval("(" + prc + ")");
+					x++;
+				}
+
+				document.getElementById("summ").innerHTML = "sum = " + sum;
+
 			}//-->
-		</script><style id="resistors.css" type="text/css">/*Resistor colors*/
-			option.blk{background-color:black;color:white;}option.brn{background-color:brown;}
-			option.red{background-color:red;}option.orange{background-color:orange;}
-			option.gul{background-color:yellow;}option.grn{background-color:green;}
-			option.blue{background-color:blue;}option.vlt{background-color:violet;}
-			option.grey{background-color:grey;}option.wht{background-color:#FFF;}
-			#impedance{color:white;background-color:blue;}.rbody{padding-top:3px;padding-bottom:3px;border:2px solid black;}
+		</script><style id="resistors.css" type="text/css">
+			/*Resistor colors*/
+			option.blk { background-color: black; color: white; }
+			option.brn { background-color: brown; }
+			option.red { background-color: red; }
+			option.orange { background-color: orange; }
+			option.gul { background-color: yellow; }
+			option.grn { background-color: green; }
+			option.blue { background-color: blue; }
+			option.vlt { background-color: violet; }
+			option.grey { background-color: grey; }
+			option.wht { background-color: #FFF; }
+
+			/* answer */
+			#impedance {
+				color: white;
+				background-color: blue;
+			}
+
+			/*box to look like a resistor */
+			.rbody {
+				padding-top: 3px;
+				padding-bottom: 3px;
+				border: 2px solid black;
+			}
+
 		</style><script type="text/javascript" id="resistors.js"><!--//By: Dustin Van Tate Testa
-			function clrchk(){var r1="";
-				r1+=String(document.forms['r-code']['clr1'].value);r1+=String(document.forms['r-code']['clr2'].value);
-				r1+=String(document.forms['r-code']['clr3'].value);r1=eval(r1);r1*=eval(document.forms['r-code']['mult'].value);
-				document.getElementById("impedance").innerHTML="The resistor is "+r1+"&#937 with a tolerance of "+document.forms['r-code']['tolerance'].value;
+			// kludge
+			function clrchk(){
+				var r1 = "";
+				r1 += String(document.forms['r-code']['clr1'].value);
+				r1 += String(document.forms['r-code']['clr2'].value);
+				r1 += String(document.forms['r-code']['clr3'].value);
+				r1 = eval(r1);
+				r1 *= eval(document.forms['r-code']['mult'].value);
+				document.getElementById("impedance").innerHTML=
+					"The resistor is " + r1 + "&#937 with a tolerance of "
+					+ document.forms['r-code']['tolerance'].value;
 			}//-->
 		</script><script type="text/javascript" id="tricalc.js"><!--By: DV Tate Testa
-			function tricalc(){document.getElementById("triarea").style.backgroundColor="blue";//reset
-				var ax=document.forms['tri']['ax'].value, ay=document.forms['tri']['ay'].value, bx=document.forms['tri']['bx'].value,
-				by=document.forms['tri']['by'].value, cx=document.forms['tri']['cx'].value, cy=document.forms['tri']['cy'].value;
-				try{ax=eval("("+ax+")");ay=eval("("+ay+")");bx=eval("("+bx+")");by=eval("("+by+")");
-					cx=eval("("+cx+")");cy=eval("("+cy+")");//eval expression (for math expressions)
-				}catch(err){document.getElementById("triarea").style.backgroundColor="red";
-					document.getElementById("triarea").innerHTML="<h3 id=\"lort\">Syntax Error(NAN)</h3>";return;
-				}if(ax==bx&&bx==cx&&cx==ax&&ay==by&&by==cy&&cy==ay){
-					document.getElementById("triarea").innerHTML= "<p>*The coordinates entered were all the same (no area).</p>";
-				}else if((ax==bx&&bx==cx&&cx==ax)!=(ay==by&&by==cy&&cy==ay)){
+			function tricalc(){
+				document.getElementById("triarea").style.backgroundColor="blue"; // reset
+				var ax = document.forms['tri']['ax'].value,
+					ay = document.forms['tri']['ay'].value,
+					bx = document.forms['tri']['bx'].value,
+					by = document.forms['tri']['by'].value,
+					cx = document.forms['tri']['cx'].value,
+					cy = document.forms['tri']['cy'].value;
+
+				try {
+					//eval expression (for math expressions)
+					ax = eval("(" + ax + ")"); ay = eval("(" + ay + ")");
+					bx = eval("(" + bx + ")"); by = eval("(" + by + ")");
+					cx = eval("(" + cx + ")"); cy = eval("(" + cy + ")");
+				} catch (err) {
+					document.getElementById("triarea").style.backgroundColor = "red";
+					document.getElementById("triarea").innerHTML =
+						"<h3 id=\"lort\">Syntax Error(NAN)</h3>";
+					return;
+				}
+
+				if (ax == bx && bx == cx && cx == ax && ay == by && by == cy && cy == ay)
+					document.getElementById("triarea").innerHTML =
+						"<p>*The coordinates entered were all the same (no area).</p>";
+				else if ((ax == bx && bx == cx && cx == ax) != (ay == by && by == cy && cy == ay))
+					document.getElementById("triarea").innerHTML =
+						"<p>*The coordinates entered formed a line (no area).</p>";
+				else if ((ax == bx && ay == by) || (bx == cx && by == cy) || (cx == ax && cy == ay))
+					document.getElementById("triarea").innerHTML =
+						"<p>*Two of the coordinates entered were the same (no area).</p>";
+				else if ((ax / ay) == (bx / by) && (bx / by) == (cx / cy) && (cx / cy) == (ax / ay))
 					document.getElementById("triarea").innerHTML="<p>*The coordinates entered formed a line (no area).</p>";
-				}else if((ax==bx&&ay==by)||(bx==cx&&by==cy)||(cx==ax&&cy==ay)){
-					document.getElementById("triarea").innerHTML="<p>*Two of the coordinates entered were the same (no area).</p>";
-				}else if((ax/ay)==(bx/by)&&(bx/by)==(cx/cy)&&(cx/cy)==(ax/ay)){
-					document.getElementById("triarea").innerHTML="<p>*The coordinates entered formed a line (no area).</p>";
-				}else{//herons formula
-					document.getElementById("triarea").style.backgroundColor="green";
-					var a=Math.pow((Math.pow((ax-bx),2)+Math.pow((ay-by),2)),0.5);
-					var b=Math.pow((Math.pow((bx-cx),2)+Math.pow((by-cy),2)),0.5);
-					var c=Math.pow((Math.pow((cx-ax),2)+Math.pow((cy-ay),2)),0.5);
-					var s=((a+b+c)/2);area2=Math.pow((s*(s-a)*(s-b)*(s-c)),0.5);
-					var area2=Math.round(area2*10000000000)/10000000000;//round to nearest 0.0000000001
-					document.getElementById("triarea").innerHTML="<h6><span id=\"seg\">AB</span>="+
-					a+"<br/><span id=\"seg\">BC</span>="+b+"<br/><span id=\"seg\">CA</span>="+
-					c+"</h6><span id=\"hidden\">"+s+"</span>The area of the triangle is "+area2+" square units";
+				else { // herons formula
+					document.getElementById("triarea").style.backgroundColor = "green";
+
+					// sqrt ( (ax-bx)^2 + (ay - by) ^ 2) --- distance formula to find side lengths
+					var a = Math.pow((Math.pow((ax - bx), 2) + Math.pow((ay - by), 2)), 0.5);
+					var b = Math.pow((Math.pow((bx - cx), 2) + Math.pow((by - cy), 2)), 0.5);
+					var c = Math.pow((Math.pow((cx - ax), 2) + Math.pow((cy - ay), 2)), 0.5);
+
+					// semi-average
+					var s = (a + b + c) / 2;
+
+					//  herons formula
+					var area2 = Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
+
+					// account for floating point inaccuracy
+					area2 = Math.round(area2 * 10000000000) / 10000000000;//round to nearest 0.0000000001
+
+					document.getElementById("triarea").innerHTML = "<h6><span id=\"seg\">AB</span>=" +
+					 a + "<br/><span id=\"seg\">BC</span>=" + b + "<br/><span id=\"seg\">CA</span>=" +
+					 c + "</h6><span id=\"hidden\">" + s + "</span>The area of the triangle is "
+					 + area2 + " square units";
 				}
 			}//-->
 		</script>
 	</head><body>
 		<ul id="navbar_here"></ul>
 		<script>genNavBar("navbar_here");</script>
-		<h1 class="pagenavn">Resistor color code</h1>
+
+
+		<h1 class="pagenavn">Resistor Color Calc</h1>
 		<div class="main"><br/>
 			<form name="r-code" method="post" >--
 				<span class="rbody">
 					<select name="clr1" onChange="clrchk()" onKeyUp="clrchk()"><!--1st digit-->
-						<option value="0" class="blk">Black</option><option value="1" class="brn">Brown</option>
-						<option value="2" class="red">Red</option><option value="3" class="orange">Orange</option>
-						<option value="4" class="gul">Yellow</option><option value="5" class="grn">Green</option>
-						<option value="6" class="blue">Blue</option><option value="7" class="vlt">Violet</option>
-						<option value="8" class="grey">Grey</option><option value="9" class="wht" >White</option>
+						<option value="0" class="blk">Black</option>
+						<option value="1" class="brn">Brown</option>
+						<option value="2" class="red">Red</option>
+						<option value="3" class="orange">Orange</option>
+						<option value="4" class="gul">Yellow</option>
+						<option value="5" class="grn">Green</option>
+						<option value="6" class="blue">Blue</option>
+						<option value="7" class="vlt">Violet</option>
+						<option value="8" class="grey">Grey</option>
+						<option value="9" class="wht" >White</option>
 					</select><select name="clr2" onChange="clrchk()" onKeyUp="clrchk()"><!--2nd digit-->
-						<option value="0" class="blk">Black</option><option value="1" class="brn">Brown</option>
-						<option value="2" class="red">Red</option><option value="3" class="orange">Orange</option>
-						<option value="4" class="gul">Yellow</option><option value="5" class="grn">Green</option>
-						<option value="6" class="blue">Blue</option><option value="7" class="vlt">Violet</option>
-						<option value="8" class="grey">Grey</option><option value="9" class="wht">White</option>
+						<option value="0" class="blk">Black</option>
+						<option value="1" class="brn">Brown</option>
+						<option value="2" class="red">Red</option>
+						<option value="3" class="orange">Orange</option>
+						<option value="4" class="gul">Yellow</option>
+						<option value="5" class="grn">Green</option>
+						<option value="6" class="blue">Blue</option>
+						<option value="7" class="vlt">Violet</option>
+						<option value="8" class="grey">Grey</option>
+						<option value="9" class="wht">White</option>
 					</select><select name="clr3" onChange="clrchk()" onKeyUp="clrchk()"><!--3rd digit-->
-						<option value="0" class="blk">Black</option><option value="1" class="brn">Brown</option>
-						<option value="2" class="red">Red</option><option value="3" class="orange">Orange</option>
-						<option value="4" class="gul">Yellow</option><option value="5" class="grn">Green</option>
-						<option value="6" class="blue">Blue</option><option value="7" class="vlt">Violet</option>
-						<option value="8" class="grey">Grey</option><option value="9" class="wht">White</option>
+						<option value="0" class="blk">Black</option>
+						<option value="1" class="brn">Brown</option>
+						<option value="2" class="red">Red</option>
+						<option value="3" class="orange">Orange</option>
+						<option value="4" class="gul">Yellow</option>
+						<option value="5" class="grn">Green</option>
+						<option value="6" class="blue">Blue</option>
+						<option value="7" class="vlt">Violet</option>
+						<option value="8" class="grey">Grey</option>
+						<option value="9" class="wht">White</option>
 					</select><select name="mult" onChange="clrchk()" onKeyUp="clrchk()"><!--multiplier-->
-						<option value="1" class="blk">Black</option><option value="10" class="brn">Brown</option>
-						<option value="100" class="red">Red</option><option value="1000" class="orange">Orange</option>
-						<option value="10000" class="gul">Yellow</option><option value="100000" class="grn">Green</option>
-						<option value="1000000" class="blue">Blue</option><option value="0.1">Gold</option><option value="0.01" class="grey">Silver</option>
+						<option value="1" class="blk">Black</option>
+						<option value="10" class="brn">Brown</option>
+						<option value="100" class="red">Red</option>
+						<option value="1000" class="orange">Orange</option>
+						<option value="10000" class="gul">Yellow</option>
+						<option value="100000" class="grn">Green</option>
+						<option value="1000000" class="blue">Blue</option>
+						<option value="0.1" class="gul">Gold</option>
+						<option value="0.01" class="grey">Silver</option>
 					</select><select name="tolerance" onChange="clrchk()" onKeyUp="clrchk()"><!--tolerance-->
-						<option value="1%" class="wht">White</option><option value="5%" class="gul">Gold</option><option value="10%" class="grey">Silver</option>
+						<option value="1%" class="wht">White</option>
+						<option value="5%" class="gul">Gold</option>
+						<option value="10%" class="grey">Silver</option>
 					</select>
 				</span>--
 			</form>
 		</div><div class="main" id="impedance">Ready for input</div><br/>
+
+
+
+
 		<h1 class="pagenavn">Summation calculator</h1>
 		<div class="main">
 			<form name="sum" method="get">
 					<input name="top" title="upper limit" placeholder="5" required="true" onchange="summate()" />
-					<table id="position_input">
-						<tr>
+					<table id="position_input"><tr>
 							<td valign="middle"><p id="cap-sigma">&#8721; </p></td>
 							<td valign="middle"><input type="text" name="process" title="expression" placeholder="(2*x + pow(5, 2))" required ="true" onchange="summate()"/></td>
-						</tr>
-					</table>
+					</tr></table>
 					x = <input type="text" name="start" title="starting value" placeholder="2" required="true" onchange="summate()"/><br/><br/>
 			</form><br/>
 		</div><div class="main" id="summ">Ready for input</div><br/>
+
+
+
 		<h1 class="pagenavn" >Triangle Area from Coordinates</h1>
 		<div class="main" >
 						<ul id="aboutpage"><li><b>Purpose</b>: To find the area between any three coordinates.</li></ul><hr/>
@@ -147,6 +307,9 @@
 				</ul>
 			</form>
 		</div><div class="main" id="triarea">Ready for input</div>
+
+
+
 		<center>
 			<span id="social_footer"></span>
 			<script>genFooter("social_footer")</script>

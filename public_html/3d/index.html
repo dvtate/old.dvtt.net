@@ -8,39 +8,119 @@
 		<meta name="start-date" id="new-style" content="2-2-2015"/><meta name="edit-date" content="5-13-2015"/>
 		<link href='//fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
 		<link rel="stylesheet" type="text/css" href="//dvtate.com/styles/nyental.css" />
-		<style type="text/css">img#full{width:100%;}img#full,img#half{padding:0 auto;cursor:zoom-in;margin:0 auto;}
-			div#round_top{border-top-left-radius:0.5em;border-top-right-radius:0.5em;}img#half{width:50%;}
-			div#round_bottom{border-bottom-left-radius:0.5em;border-bottom-right-radius:0.5em;}h5#ikimpt{display:inline;color:#666;}
-			h2#software_label{text-align:center;}div#fotos{padding: 0 auto;background-color:transparent;margin:0% 5%;}h4{display: inline;}
+		<style type="text/css">
+
+			/* img wall */
+			div#fotos {
+				padding: 0 auto;
+				background-color: transparent;
+				margin: 0% 5%;
+			}
+
+			/* img tiles */
+			img#full { width: 100%; }
+			img#half { width: 50%; }
+			img#full, img#half {
+				padding: 0 auto;
+				cursor: zoom-in;
+				margin: 0 auto;
+			}
+
+			/* buns to the image wall burger */
+			div#round_top {
+				border-top-left-radius: 0.5em;
+				border-top-right-radius: 0.5em;
+			}
+			div#round_bottom {
+				border-bottom-left-radius: 0.5em;
+				border-bottom-right-radius: 0.5em;
+			}
+
+
+			h5#ikimpt { /* copyright info */
+				display: inline;
+				color: #666;
+			}
+			h2#software_label { /* software headings */
+				text-align: center;
+			}
+			h4 { display: inline; }
 		</style><script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script src="https://dvtate.com/scripts/main.js"></script>
 
 		<!--Note to self: replace image tile/walls with image galleries/slideshows-->
+		<!-- also use Linux machine for screenshots instead of windows-->
 	</head><body>
 		<ul id="navbar"></ul>
-		<script>genNavBar("navbar");</script>
+		<script>genNavBar("navbr");</script>
+
+		<!-- sketchup -->
 		<div class="main">
 			<h2><b>How I got started</b>:</h2>
 			<ul><p class="ind">I was introduced to 3D modeling in the 5<sup>th</sup> grade when I saw one of my friends on the school's computer using Google(now Trimble) SketchUp. I thought it looked cool, so I went home and put it on my computer and made some models. I used the software to do projects, and for fun. In the 7<sup>th</sup> grade, my modelling got better, and I decided to make a new dreamhouse (dreamhouse5), in addition to a project. I'm still working on that dreamhouse (currently<!--6/10--> 34.3 MB). In 8<sup>th</sup> grade, I decided i wanted to make a video game. Because SketchUp is proprietary software, I couldn't make money off a game which included models I made in SketchUp. So I found <a href="http://wings3d.com" target="_blank">Wings 3D</a> I quickly learned the software over the summer via tutorials. In the 9<sup>th</sup> grade, I joined the robotics team. We won a 3D printer, and using Wings 3D, I was able to make models for printing. I also started a project which used Blender, one of the best 3D modelling software out there, but it was too hard so I stuck to Wings. Over the summer of 2015(9<sup>th</sup> grade), I began playing with CGI (computer generated images), attempting to make realistic models and then render them using POV Ray. I've made some pretty cool stuff.</p></ul>
-		</div><br/><div class="main" id="round_top"><h2 id="software_label">SketchUp</h2><hr/>
+		</div><br/>
+		<div class="main" id="round_top">
+			<h2 id="software_label">SketchUp</h2><hr/>
 			<p class="ind">SketchUp is an easy to use tool based 3D modeling software, aimed at the general public, the main field that uses this software extensively is the architecture and design fields as they need to make a model quick and easy for a job. One of the most noteable features in sketchup is the 3D ware house, a collection of 3D models which you can add to your project (cheat).</p>
-		</div><div id="fotos">
-			<a href="//dvtate.com/3d/fotos/skp/warehouse.png"><img id="full" src="//dvtate.com/3d/fotos/skp/warehouse.png" alt="screenshot" title="The 3D Warehouse"/></a>
-			<a href="//dvtate.com/3d/fotos/skp/01.png"><img id="half" src="//dvtate.com/3d/fotos/skp/01.png" alt="screenshot" title="A chair I made in the 8th grade"/></a><a href="//dvtate.com/3d/fotos/skp/05.png"><img id="half" src="//dvtate.com/3d/fotos/skp/05.png" alt="screenshot" title="a keyboard I made as a part of my dreamhouse5"/></a>
-			<a href="//dvtate.com/3d/fotos/skp/02.png"><img id="half" src="//dvtate.com/3d/fotos/skp/02.png" alt="screenshot" title="Part of my 7th grade Social Studies project on Bhutan"/></a><a href="//dvtate.com/3d/fotos/skp/03.png"><img id="half" src="//dvtate.com/3d/fotos/skp/03.png" alt="screenshot" title="A subway station I planned to use as a level in a video game"/></a>
-			<a href="//dvtate.com/3d/fotos/skp/04.png"><img id="full" src="//dvtate.com/3d/fotos/skp/04.png" alt="screenshot" title="the underground portion of my dreamhouse5"/></a>
-		</div><div class="main" id="round_bottom">
-			<h4><a href="https://drive.google.com/folderview?id=0B4fXJH1IXKwnfmd0SEtybDFZc21nbWpkUjJSM0ljcU9HT192SkNNMzNCcVRMUDdDLUdkV1k&usp=sharing" target="_blank">Get My Models</a> <h5 id="ikimpt">&copy; DV Tate Testa 2017</h5></h4><!--6/11-->
-		</div><br/><div class="main" id="round_top"><h2 id="software_label">Wings 3D</h2><hr/>
+		</div>
+		<div id="fotos">
+			<a href="//dvtate.com/3d/fotos/skp/warehouse.png">
+				<img id="full" src="//dvtate.com/3d/fotos/skp/warehouse.png" alt="screenshot" title="The 3D Warehouse"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/skp/01.png">
+				<img id="half" src="//dvtate.com/3d/fotos/skp/01.png" alt="screenshot" title="A chair I made in the 8th grade"/>
+			</a><a href="//dvtate.com/3d/fotos/skp/05.png">
+				<img id="half" src="//dvtate.com/3d/fotos/skp/05.png" alt="screenshot" title="a keyboard I made as a part of my dreamhouse5"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/skp/02.png">
+				<img id="half" src="//dvtate.com/3d/fotos/skp/02.png" alt="screenshot" title="Part of my 7th grade Social Studies project on Bhutan"/>
+			</a><a href="//dvtate.com/3d/fotos/skp/03.png">
+				<img id="half" src="//dvtate.com/3d/fotos/skp/03.png" alt="screenshot" title="A subway station I planned to use as a level in a video game"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/skp/04.png">
+				<img id="full" src="//dvtate.com/3d/fotos/skp/04.png" alt="screenshot" title="the underground portion of my dreamhouse5"/>
+			</a>
+		</div>
+		<div class="main" id="round_bottom">
+			<h4><a href="https://drive.google.com/folderview?id=0B4fXJH1IXKwnfmd0SEtybDFZc21nbWpkUjJSM0ljcU9HT192SkNNMzNCcVRMUDdDLUdkV1k&usp=sharing" target="_blank">Get My Models
+			</a> <h5 id="ikimpt">&copy; DV Tate Testa 2017</h5></h4><!--6/11-->
+		</div><br/>
+
+		<!-- wings3d stuff -->
+		<div class="main" id="round_top">
+			<h2 id="software_label">Wings 3D</h2><hr/>
 			<p class="ind">Wings 3D is an advanced subdivision modeler. It is built in erlang a concurrent functional language making it fast and cross platform compatible, in addition, Wings 3D is open-source software, making it a great tool. For me it is easy to use once you get the keyboard shortcuts down. Wings is best for small individual models as opposed to large complex projects. Wings has plugins which export to rendering engines like POV Ray, making it good for CGI. I feel that wings is a simpler, less capable, and easier to learn alternative to Blender.</p>
-		</div><div id="fotos">
-			<a href="//dvtate.com/3d/fotos/wings/01.png"><img id="half" src="//dvtate.com/3d/fotos/wings/01.png" alt="screenshot" title="an LED I made with wings and rendered in POV Ray"/></a><a href="//dvtate.com/3d/fotos/wings/02.png"><img id="half" src="//dvtate.com/3d/fotos/wings/02.png" alt="screenshot" title="a spaceship/jet"/></a>
-			<a href="//dvtate.com/3d/fotos/wings/04.png"><img id="half" src="//dvtate.com/3d/fotos/wings/04.png" alt="screenshot" title="a bathtub I made in wings"/></a><a href="//dvtate.com/3d/fotos/wings/03.png"><img id="half" src="//dvtate.com/3d/fotos/wings/03.png" alt="screenshot" title="the rendered bathtub (with reflective legs)"/></a>
-			<a href="//dvtate.com/3d/fotos/wings/05.png"><img id="half" src="//dvtate.com/3d/fotos/wings/05.png" alt="screenshot" title="a cell phone showing wings' UV mapping capabilities"/></a><a href="//dvtate.com/3d/fotos/wings/06.png"><img id="half" src="//dvtate.com/3d/fotos/wings/06.png" alt="screenshot" title="an interlocking mobius torus knot (made from a tutorial)"/></a>
-			<a href="//dvtate.com/3d/fotos/wings/07.png"><img id="half" src="//dvtate.com/3d/fotos/wings/07.png" alt="screenshot" title="the first thing I built on my own in wings was a sword(not this one)"/></a><a href="//dvtate.com/3d/fotos/wings/08.png"><img id="half" src="//dvtate.com/3d/fotos/wings/08.png" alt="screenshot" title="a pepper; wings can make some organic shapes"/></a>
-		</div><div class="main" id="round_bottom">
-			<h4><a href="https://drive.google.com/folderview?id=0B4fXJH1IXKwnfkdXRUVVcG1EZFY4cjBxTnhpMVhEaWtYa3d5WFBfZFc3dk5QTXh5SHhiM3M&usp=sharing" target="_blank">Get My Models</a> <h5 id="ikimpt">&copy; DV Tate Testa 2017</h5></h4><!--6/11-->
-		</div><center><span id="social_footer"></span></center>
+		</div>
+
+		<div id="fotos">
+			<a href="//dvtate.com/3d/fotos/wings/01.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/01.png" alt="screenshot" title="an LED I made with wings and rendered in POV Ray"/>
+			</a><a href="//dvtate.com/3d/fotos/wings/02.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/02.png" alt="screenshot" title="a spaceship/jet"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/wings/04.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/04.png" alt="screenshot" title="a bathtub I made in wings"/>
+			</a><a href="//dvtate.com/3d/fotos/wings/03.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/03.png" alt="screenshot" title="the rendered bathtub (with reflective legs)"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/wings/05.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/05.png" alt="screenshot" title="a cell phone showing wings' UV mapping capabilities"/>
+			</a><a href="//dvtate.com/3d/fotos/wings/06.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/06.png" alt="screenshot" title="an interlocking mobius torus knot (made from a tutorial)"/>
+			</a>
+			<a href="//dvtate.com/3d/fotos/wings/07.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/07.png" alt="screenshot" title="the first thing I built on my own in wings was a sword(not this one)"/>
+			</a><a href="//dvtate.com/3d/fotos/wings/08.png">
+				<img id="half" src="//dvtate.com/3d/fotos/wings/08.png" alt="screenshot" title="a pepper; wings can make some organic shapes"/>
+			</a>
+		</div>
+
+		<div class="main" id="round_bottom">
+			<h4><a href="https://drive.google.com/folderview?id=0B4fXJH1IXKwnfkdXRUVVcG1EZFY4cjBxTnhpMVhEaWtYa3d5WFBfZFc3dk5QTXh5SHhiM3M&usp=sharing" target="_blank">Get My Models
+			</a> <h5 id="ikimpt">&copy; DV Tate Testa 2017</h5></h4><!--6/11-->
+		</div>
+
+		<center><span id="social_footer"></span></center>
 		<script>genFooter("social_footer");</script>
 	</body>
 </html>
