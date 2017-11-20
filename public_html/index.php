@@ -71,26 +71,26 @@
 				for(var c = 1; c <= 3; c++) // cols
 					for(var r = 1; r <= rownum; r++) {//rows
 						document.getElementById("col" + c + "row" + r).style.width = "30%"; // 30% * 3 = 90% of screen
-						document.getElementById("col"+c+"row"+r+"sm").style.display = "none";
-						document.getElementById("col"+c+"row"+r+"lg").style.display = "none";
-						document.getElementById("col"+c+"row"+r+"md").style.display = "inline";
+						document.getElementById("col" + c + "row" + r + "sm").style.display = "none";
+						document.getElementById("col" + c + "row" + r + "lg").style.display = "none";
+						document.getElementById("col" + c + "row" + r + "md").style.display = "inline";
 					}
 			}//-->
 		</script>
 	</head><body>
 		<?php # automates some content
-			function getpostcount(){ // returns the number of posts
+			function getPostCount(){ // returns the number of posts
 				$threadtxt = file_get_contents('./chat/thread.txt');
 				return substr_count($threadtxt, "<div id=\"post\">");
 			}
-			function getlatestpost(){ // return latest post
-				preg_match("'<div id=\"post\">(.*?)</div></div>'si",file_get_contents('./chat/thread.txt'),$match);#put all post contents into array $matches[]
+			function getLatestPost(){ // return latest post
+				preg_match("'<div id=\"post\">(.*?)</div></div>'si", file_get_contents('./chat/thread.txt'), $match);#put all post contents into array $matches[]
 				if ($match)
 					return "<div id=\"post\">".$match[1]."</div></div>";//return first post
 				else # missing thread
 					return "There was a major error attempting to read the contents of the chatroom. (contact me: toast27@gmail.com)";
 			}
-			function getlatestosvote(){
+			function getLatestOSVote(){
 				preg_match("'<div class=\"dit\">(.*?)</div>'si", file_get_contents('./os/thread.txt'), $match); # put all votes into array $matches[]
 				if ($match)
 					return "<div class=\"dit\">".$match[1]."</div>"; // return first post
@@ -167,15 +167,15 @@
 				</span>
 			</td><td class="nybox" id="col2row1" onclick="focusbox(2,1)" title="double-click to See what's happening in the ChatRoom">
 				<span id="col2row1sm" style="display: none">
-					<h1>Chat<sup><span id="bubblealert"><?php echo getpostcount(); ?></span></sup></h1>
+					<h1>Chat<sup><span id="bubblealert"><?php echo getPostCount(); ?></span></sup></h1>
 				</span>
 				<span id="col2row1md">
 					<h2>Chat Room</h2><hr/>
-					<h4><span id="bubblealert"><?php echo getpostcount(); ?></span> messages</h4>
+					<h4><span id="bubblealert"><?php echo getPostCount(); ?></span> messages</h4>
 				</span>
 				<span class="lgfull" id="col2row1lg" onclick="resetboxes()">
 					<h2><b>Latest chatroom post</b>:</h2>
-					<?php echo getlatestpost(); ?><br/><hr/>
+					<?php echo getLatestPost(); ?><br/><hr/>
 					<h3 style="display:inline"><a href="//dvtate.com/chat/">join the conversation</a></h3>
 				</span>
 			</td><td class="nybox" id="col3row1"  onclick="focusbox(3,1)" title="Recently added page (double click box)">
@@ -184,12 +184,12 @@
 				</span>
 				<span id="col3row1md">
 					<h2>Newest Page</h2><hr/>
-					<h4><a href="//dvtate.com/os/">Operating Systems</a></h4><?php echo getlatestosvote(); ?>
+					<h4><a href="//dvtate.com/os/">Operating Systems</a></h4><?php echo getLatestOSVote(); ?>
 				</span>
 				<span class="lgfull" id="col3row1lg" onclick="resetboxes()">
 					<h2><b><a href="//dvtate.com/os/">Operating Systems</a></b></h2>
 					<p class="ind">This is one of my better looking pages, mostly because it has pictures and more color than most of my other pages. I made an voting place, so make sure to pick your favorite operating systems. My plan for this page, or really this category of pages, is to provide a resource for anyone who plans to try the operating system. I plan to make the article similar in design and behavior to a wikipedia article. Because I'm not perfect, I plan to make a comments area below each article so that people can give me recommendations.</p>
-					<h4><b>Recent recommendation:</b></h4><?php echo getlatestosvote()."\n"; ?>
+					<h4><b>Recent recommendation:</b></h4><?php echo getLatestOSVote()."\n"; ?>
 				</span>
 			</td>
 		</tr></table>
