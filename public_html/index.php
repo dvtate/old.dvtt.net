@@ -11,50 +11,73 @@
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1 btn-->
 		<script src="//dvtate.com/scripts/main.js" type="text/javascript"></script>
 		<style type="text/css">
-			span#bubblealert{background-color:#f00;color:#fff;
-				border-radius:5px;border:2px solid #fff;
-			}sup>span#bubblealert{font-size:75%;}
-			div.dit{background-color:#FFF;padding:2px 20px 5px 10px;margin:0% 7%;
-				border-radius:30px;border-bottom-right-radius:0;border:2px solid #454545;
-				font-family:'Ubuntu', 'Lucida Sans Unicode', 'Lucida Grande', Helvetica, sans-serif;
-			}img#archlinuxlogo{max-height:150px;max-width:450px;}
+			span#bubblealert {
+				background-color: #f00; color: #fff;
+				border: 2px solid #fff; border-radius: 5px;
+			}
+			sup > span#bubblealert { font-size: 75%; }
+			div.dit {
+				background-color: #fff;
+				padding: 2px 20px 5px 10px; margin: 0% 7%;
+				border: 2px solid #454545; border-radius: 30px;
+				border-bottom-right-radius: 0;
+				font-family: 'Ubuntu', 'Lucida Sans Unicode', 'Lucida Grande', Helvetica, sans-serif;
+			}
+			img#archlinuxlogo {
+				max-height:150px;max-width:450px;
+			}
 		</style><script type="text/javascript"><!--//box control
 			var growboxid,shrinkboxid1,shrinkboxid2,small,med,large,rownum=2;
 			function focusbox(boxcol,boxrow){var infocus=
-				!!(document.getElementById("col"+boxcol+"row"+boxrow+"lg").style.display!="none");
-				resetboxes();if(boxcol==1){growboxid="col1row"+boxrow;
-					shrinkboxid1="col2row"+boxrow;shrinkboxid2="col3row"+boxrow;
-				}else if(boxcol==2){growboxid="col2row"+boxrow;
-					shrinkboxid1="col1row"+boxrow;shrinkboxid2="col3row"+boxrow;
-				}else if(boxcol==3){growboxid="col3row"+boxrow;
-					shrinkboxid1="col2row"+boxrow;shrinkboxid2="col1row"+boxrow;
-				}else{alert("There are only three columns!!!");}//if/when I screw up:P
-				if(infocus){resetboxes();}else{
-					growbox(growboxid);shrinkbox(shrinkboxid1);
+				document.getElementById("col"+boxcol+"row"+boxrow+"lg").style.display!="none";
+				resetboxes();
+				if (boxcol == 1) {
+					growboxid = "col1row" + boxrow;
+					shrinkboxid1 = "col2row" + boxrow;
+					shrinkboxid2 = "col3row" + boxrow;
+				} else if (boxcol == 2) {
+					growboxid = "col2row" + boxrow;
+					shrinkboxid1 = "col1row" + boxrow;
+					shrinkboxid2 = "col3row" + boxrow;
+				} else if (boxcol == 3) {
+					growboxid = "col3row" + boxrow;
+					shrinkboxid1 = "col2row" + boxrow;
+					shrinkboxid2 = "col1row" + boxrow;
+				} else // will never get here... I think..
+					alert("There are only three columns!!!");
+
+				if (infocus) {
+					resetboxes();
+				} else {
+					growbox(growboxid);
+					shrinkbox(shrinkboxid1);
 					shrinkbox(shrinkboxid2);
 				}
-			}function shrinkbox(boxid){//expands box
-				document.getElementById(boxid).style.width="20%";
-				document.getElementById(boxid+"sm").style.display="block";
-				document.getElementById(boxid+"md").style.display="none";
-				document.getElementById(boxid+"lg").style.display="none";
-			}function growbox(boxid){//compresses box
-				document.getElementById(boxid).style.width="50%";
-				document.getElementById(boxid+"lg").style.display="block";
-				document.getElementById(boxid+"md").style.display="none";
-				document.getElementById(boxid+"sm").style.display="none";
-			}function resetboxes(){//reset boxes to default size
-				for(var c=1;c<=3;c++){//cols
-					for(var r=1;r<=rownum;r++){//rows
-						document.getElementById("col"+c+"row"+r).style.width="30%";//box.style.height="250px";
-						document.getElementById("col"+c+"row"+r+"sm").style.display="none";
-						document.getElementById("col"+c+"row"+r+"lg").style.display="none";
-						document.getElementById("col"+c+"row"+r+"md").style.display="inline";
+			}
+			function shrinkbox(boxid){ // expands box
+				document.getElementById(boxid).style.width = "20%";
+				document.getElementById(boxid + "sm").style.display = "block";
+				document.getElementById(boxid + "md").style.display = "none";
+				document.getElementById(boxid + "lg").style.display = "none";
+			}
+			function growbox(boxid){ // compresses box
+				document.getElementById(boxid).style.width = "50%";
+				document.getElementById(boxid + "lg").style.display = "block";
+				document.getElementById(boxid + "md").style.display = "none";
+				document.getElementById(boxid + "sm").style.display = "none";
+			}
+
+			function resetboxes(){ // reset boxes to default size
+				for(var c = 1; c <= 3; c++) // cols
+					for(var r = 1; r <= rownum; r++) {//rows
+						document.getElementById("col" + c + "row" + r).style.width = "30%"; // 30% * 3 = 90% of screen
+						document.getElementById("col"+c+"row"+r+"sm").style.display = "none";
+						document.getElementById("col"+c+"row"+r+"lg").style.display = "none";
+						document.getElementById("col"+c+"row"+r+"md").style.display = "inline";
 					}
-				}
 			}//-->
 		</script>
-	</head><body onLoad="removeHostAd()">
+	</head><body>
 		<?php # automates some content
 			function getpostcount(){ // returns the number of posts
 				$threadtxt = file_get_contents('./chat/thread.txt');
@@ -81,11 +104,15 @@
 			<td class="nybox" id="col1row1" onclick="focusbox(1,1)">
 				<span id="col1row1sm" style="display: none" title="double-click to see how busy I've been and what has changed since last time">
 					<h2>Updates</h2>
-				</span><span id="col1row1md" title="see how busy I've been and what has changed since last time">
-					<h2>Updates</h2><hr/><h3>See what I'm doing with my <span title="or lack thereof">time</span></h3>
-				</span><span class="lgfull" id="col1row1lg" onclick="resetboxes()">
+				</span>
+				<span id="col1row1md" title="see how busy I've been and what has changed since last time">
+					<h2>Updates</h2><hr/>
+					<h3>See what I'm doing with my time</h3>
+				</span>
+				<span class="lgfull" id="col1row1lg" onclick="resetboxes()">
 					<h2 title="double-click to see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
+						<li><b>2017.11.15</b>: move website to pi server after web host begins misbehaving</li>
 						<li><b>2017.9.5</b>: convert pi server into a shadowsocks server so that my robotics team and I can use the real internet at school.</li>
 						<li><b>2017.8.25</b>: School blocks expressvpn, which I was paying $200/year for (2 subs, shared acct.)</li>
 						<li><b>2017.8.7</b>: began learing Chinese on GA Virtual School so I can communicate with internet friends.</li>
@@ -141,10 +168,12 @@
 			</td><td class="nybox" id="col2row1" onclick="focusbox(2,1)" title="double-click to See what's happening in the ChatRoom">
 				<span id="col2row1sm" style="display: none">
 					<h1>Chat<sup><span id="bubblealert"><?php echo getpostcount(); ?></span></sup></h1>
-				</span><span id="col2row1md">
+				</span>
+				<span id="col2row1md">
 					<h2>Chat Room</h2><hr/>
 					<h4><span id="bubblealert"><?php echo getpostcount(); ?></span> messages</h4>
-				</span><span class="lgfull" id="col2row1lg" onclick="resetboxes()">
+				</span>
+				<span class="lgfull" id="col2row1lg" onclick="resetboxes()">
 					<h2><b>Latest chatroom post</b>:</h2>
 					<?php echo getlatestpost(); ?><br/><hr/>
 					<h3 style="display:inline"><a href="//dvtate.com/chat/">join the conversation</a></h3>
@@ -152,51 +181,64 @@
 			</td><td class="nybox" id="col3row1"  onclick="focusbox(3,1)" title="Recently added page (double click box)">
 				<span id="col3row1sm" style="display:none">
 					<h2>OS's</h2>
-				</span><span id="col3row1md">
+				</span>
+				<span id="col3row1md">
 					<h2>Newest Page</h2><hr/>
 					<h4><a href="//dvtate.com/os/">Operating Systems</a></h4><?php echo getlatestosvote(); ?>
-				</span><span class="lgfull" id="col3row1lg" onclick="resetboxes()">
+				</span>
+				<span class="lgfull" id="col3row1lg" onclick="resetboxes()">
 					<h2><b><a href="//dvtate.com/os/">Operating Systems</a></b></h2>
 					<p class="ind">This is one of my better looking pages, mostly because it has pictures and more color than most of my other pages. I made an voting place, so make sure to pick your favorite operating systems. My plan for this page, or really this category of pages, is to provide a resource for anyone who plans to try the operating system. I plan to make the article similar in design and behavior to a wikipedia article. Because I'm not perfect, I plan to make a comments area below each article so that people can give me recommendations.</p>
 					<h4><b>Recent recommendation:</b></h4><?php echo getlatestosvote()."\n"; ?>
 				</span>
 			</td>
 		</tr></table>
+
 		<!--row#2-->
 		<table class="row"><tr>
 			<td class="nybox" id="col1row2"  onclick="focusbox(1,2)" title="Ever wonder how or why I made my website? (double-click)">
 				<span id="col1row2sm" style="display:none">
 					<h2>About This Site</h2>
-				</span><span id="col1row2md">
+				</span>
+				<span id="col1row2md">
 					<h2>About This Website</h2><hr/>
 					<h4>A short story about how this website came to be</h4>
-				</span><span class="lgfull" id="col1row2lg" onclick="resetboxes()">
+				</span>
+				<span class="lgfull" id="col1row2lg" onclick="resetboxes()">
 					<h2><b>About this Website</b></h2>
 					<p class="ind">In the spring of 2014, I created a program in VBScript which finds the area between any 3 coordinates. Most of the kids in my math class wanted a copy of it. I attempted to send it via email, but Gmail wouldn't let me send it. So I converted it to ASP, ASP.NET, and finally PHP (I had never heard of JavaScript). This was my first addition to this website. You can still visit it <a  href="http://www.dvtate.com/prog/php/tri.php" >here</a> (or <a href="http://www.dvtate.com/prog/php/oldtri.php">here</a> for the original prototype). I continued to add more pages for all of my hobbies. I ended up geting a free domain for my website, and have continued adding pages.</p>
 				</span>
 			</td><td class="nybox" id="col2row2"  onclick="focusbox(2,2)" title="My primary operating system (double-click)">
 				<span id="col2row2sm" style="display:none">
 					<h2>Linux</h2>
-				</span><span id="col2row2md">
+				</span>
+				<span id="col2row2md">
 					<h2>Favorite Linux Distro</h2><hr/>
 					<h4>Right now I'm into Arch Linux</h4>
-				</span><span class="lgfull" id="col2row2lg" onclick="resetboxes()">
+				</span>
+				<span class="lgfull" id="col2row2lg" onclick="resetboxes()">
 					<img src="//dvtate.com/os/logos/arch.png" width="75%" id="archlinuxlogo" alt="arch linux logo"/>
 					<p class="ind">My first 3 attempts at Arch Linux were learning experiences, but I have gotten good enough to use it as an everyday operating system. What I love about Arch is you can make it into whatever you want. Also Arch is a rolling-release distro, so unlike Debian, I don't have to start over every 4 years. Also, Arch Linux has some of the newest software out there, and great tools for building and installing from it's massive selection of third party software in the <a href="https://aur.archlinux.org/" target="_blank" title="the arch user repository">AUR</a> (The Arch User Repository).</p>
 				</span>
 			</td><td class="nybox" id="col3row2"  onclick="focusbox(3,2)" title="double-click to read about my scripting language"> <!-- Replace this with favorite anime series instead for the glory of lain-chan :))) -->
 				<span id="col3row2sm" style="display:none">
 					<h2><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></h2>
-				</span><span id="col3row2md">
+				</span>
+				<span id="col3row2md">
 					<h2>My Scripting Language</h2><hr/>
 					<h4>Double-click to read more.</h4>
-				</span><span class="lgfull" id="col3row2lg" onclick="resetboxes()">
+				</span>
+				<span class="lgfull" id="col3row2lg" onclick="resetboxes()">
 					<h2><b><a href="https://github.com/dvtate/yoda" target="_blank">YodaScript</a></b></h2>
 					<p class="ind">YodaScript has been a pet project of mine since June of 2016. It is a postfix, stack-based, and turing-complete language which interprets program files on the fly and doesn't utilize a preprocessor or AST. It supports a variety of programming paradigms with more coming. I will continue to add more features to the langauge in my freetime and hope it will eventually become something valuable.</p>
 				</span>
 			</td>
 		</tr></table>
+
+
+
 		<center><span id="social_footer"></span></center>
 		<script>genFooter("social_footer");</script>
+
 	</body>
 </html>

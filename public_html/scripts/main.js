@@ -36,11 +36,13 @@ function genFooter(id) {
 
 }
 
+// NOTE: no longer needed therefore commented out
 // remove annoying ad my free hosting provider added
-function removeHostAd() {
+function removeHostAd() { /*
 	var bodyElems = document.body.children;
 	// delete second to last elem - the ad
 	document.body.removeChild(bodyElems[bodyElems.length - 2]);
+	*/
 }
 
 // google analytics code
