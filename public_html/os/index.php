@@ -155,6 +155,7 @@
 			}div#nyos{border-left:20px solid red;margin-left:6%;margin-right:6%;}
 			span#badinp{display:inline;}
 		</style>
+		<script type="text/javascript" src="https://dvtate.com/scripts/main.js"></script>
 		<script type="text/javascript"><!--//
 			function isValidEmail(){
 				var x = document.forms["osform"]["email"].value;
