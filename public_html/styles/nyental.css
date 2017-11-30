@@ -4,7 +4,7 @@ html{font-size:112.5%;}
 body{min-width:450px;font-family:sans-serif;
 	color:#000;margin-left:0px;margin-right:0px;
 	background-color:#000;background-attachment:fixed;
-	background-image:url(//dvtate.com/styles/animation.gif);
+	background-image:url(//dvtate.com/styles/pinkdust.png);
 }div.main{background-color:#FFF;padding:2px 20px 5px 10px;margin:0% 5%;}
 /*nav-bar*/
 a.page:link, a.page:visited{padding:4px;display:block;
@@ -63,7 +63,7 @@ div.lefttoppopup{background-color:#FFF;border:1px solid #000;opacity:1;
 div#post{border:3px solid #647083;border-radius:3px;
 	text-rendering:optimizeSpeed;margin:0% 6%;
 	background-color:#FFF;box-shadow:10px 10px #000;
-	padding-bottom:5px;padding-right:5px;				
+	padding-bottom:5px;padding-right:5px;
 }div.msg{border:1px solid #718DBC;border-radius:4px;
 	box-shadow:0 0 0.25em rgb(5,9,2);padding:5px;margin-left:2%;
 }table#iconname{max-width:80%;}
