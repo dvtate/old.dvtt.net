@@ -46,13 +46,15 @@
 		if ($diff > 0) // if too many start blocks
 			for ($i = 0; $i < $diff; $i++)
 				$msg .= $endblock;
+
 		elseif ($diff < 0) { // too many end tags
-			$msgholder = $msg;
+			$msgcpy = $msg;
 			$msg = "";
 			for ($i = 0; $i > $diff; $i--)
 				$msg .= $startblock;
-			$msg .= $msgholder;
-		}
+			$msg .= $msgcpy;
+
+		} // else - no missing ends or extra end tags
 		return $msg;
 	}
 
