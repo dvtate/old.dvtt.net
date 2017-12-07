@@ -235,10 +235,10 @@
 			</td>
 		</tr></table>
 
-
-
 		<center><span id="social_footer"></span></center>
 		<script>genFooter("social_footer");</script>
+
+		<script src="https://widget.battleforthenet.com/widget.js" async></script>
 
 	</body>
 </html>
