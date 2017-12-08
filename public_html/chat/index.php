@@ -13,6 +13,9 @@
 		<script src="https://apis.google.com/js/platform.js" async defer></script><!--Google+1-->
 		<script src="https://dvtate.com/scripts/main.js"></script>
 		<style type="text/css" id="talksyle">
+			textarea#msgin { resize:none; height: 99.2%; width: 98%; }
+			div#newpost { border-left: 20px solid green; }
+			
 			#block { border: 1px solid #000; }
 			input#postit {
 				display: block;
@@ -24,6 +27,7 @@
 				font-family: 'Ubuntu', sans-serif;
 				height: 15px;
 			}
+
 		</style>
 		<script language="javascript" type="text/javascript"><!--//tab button adds tab to post
 			function enabletabbing(){
@@ -259,6 +263,6 @@
 		<center><span id="social_footer"></span></center>
 		<script>genFooter("social_footer");</script>
 
-		
+
 	</body>
 </html>
