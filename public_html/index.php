@@ -113,6 +113,7 @@
 					<h2 title="double-click to see how busy I've been and what has changed since last time"><b>Updates</b></h2>
 					<ul id="update-timeline">
 						<li><b>2017.12.11</b>:	began work on <a href="https://dvtate.github.io" target="_blank">my github page</a> as a place to experiment with web design.</li>
+						<li><b>2017.12.9</b>:	accepted into <a href="https://web.iit.edu/" target="_blank">Illinois Institute of Technology</a>. Planning on studying Computer Science or Computer Engineering</li>
 						<li><b>2017.11.15</b>:	move website to pi server after web host begins misbehaving</li>
 						<li><b>2017.9.5</b>:	convert pi server into a shadowsocks server so that my robotics team and I can use the real internet at school.</li>
 						<li><b>2017.8.25</b>:	School blocks expressvpn, which I was paying $200/year for (2 subs, shared acct.)</li>
