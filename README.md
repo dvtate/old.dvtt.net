@@ -1,15 +1,18 @@
 # dvtate.com
-My personal website
+  This repo is for my [old] personal website. My current one, [me.dvtate.com](https://github.com/dvtate.github.io) is more streamlined for contact information and isn't as personalized.
 
-  I first started develpment on this website in 2014. It was intended as a way for me to share a small program I made for math class, but I gradually got more advanced in web development and added more pages and drastically improved the appearance of the site. However recently (2016), I've gotten addicted to lower-level languages like C/C++ and this project has been put on the back burner. I'm still adding new material, but slowly. 
+  I first started develpment on this website in 2014. It was intended as a way for me to share a small program I made for math class, but I gradually got more advanced in web development and added more pages and drastically improved the appearance of the site. In 2016 I shifted focus towards lower level programming languages. I kept gradually adding material to this site until around 2018 when I decided to remove it from the internet.
 
-  After my parents told me I'm not allowed to go out with my gf anymore, I had to move my website off of her VPS, so now I recognize the importance of backups, I decided to post my source (sensitive files removed). So that way I could get reccomendations, and perhaps some guidance since I know I'm doing a great many things wrong. 
-  
-## Contributing
-If you would like to contribute, please open up an issue as opposed to a pull request.
+## Hosting
+- This website is no longer hosted (php5 == security vulnerability)
+- Previously was hosted on these places:
+  - ex gf's server: until parents made us separate
+  - 000webhost.com: until they got hacked
+    + you can see how I disabled their ads
+  - home server: until php5 became obsolete
 
 ## Profile Page
-This website is somewhat outdated, but still contains some relevant information and content. I now plan on sharing [dvtate.github.io](https://dvtate.github.io) instead of this website.
+This website is outdated, but still contains some relevant information and content. I now plan on sharing [me.dvtate.com](https://dvtate.github.io) instead of this website.
 
 ## Licensing
 The code is covered under GPLv3, but the content and rendered site are covered under CC0
