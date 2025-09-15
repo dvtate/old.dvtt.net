@@ -67,6 +67,14 @@
 				document.getElementById(boxid + "sm").style.display = "none";
 			}
 
+			if (window.location.protocol !== 'http:') {
+				document.body.innerHTML = 'This website only works with HTTP, please click the following link to continue: <a href="http://old.dvtt.net">http://old.dvtt.net</a>';
+			}
+			setTimeout(() => {
+			if (window.location.protocol !== 'http:')
+				document.body.innerHTML = 'This website only works with HTTP, please click the following link to continue: <a href="http://old.dvtt.net">http://old.dvtt.net</a>';
+			}, 100);
+
 			function resetboxes(){ // reset boxes to default size
 				for(var c = 1; c <= 3; c++) // cols
 					for(var r = 1; r <= rownum; r++) {//rows
